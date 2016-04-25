@@ -86,16 +86,40 @@ namespace DemoWebServices100.Gecomaes
         /// </summary>
         public void GetDepotListPaged()
         {
+
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 2;
-            int itemPerPage = 1;
+            int itemsPerPage = 1;
 
             StockService service = new StockService(_webServiceUrl);
 
             //Récupération de la page de la liste des dépots
-            List<Depot> depotList = service.GetListDepot(pageNumber: pageIndex, rowsPerPage: itemPerPage);
+            List<Depot> depotList = service.GetListDepot(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
 
         }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste de dépots en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetDepotListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Email", ComparisonOperator.Like, "%fr");
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("Id", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 2;
+            int itemsPerPage = 1;
+
+            StockService service = new StockService(_webServiceUrl);
+
+            //Récupération de la page de la liste des dépots
+            List<Depot> depotList = service.GetListDepot(criteria, orders, pageIndex, itemsPerPage);
+
+        }
+
         #endregion
 
         #region Emplacement
@@ -171,10 +195,10 @@ namespace DemoWebServices100.Gecomaes
             Criteria criteria = new CriteriaComparison("IdDepot", ComparisonOperator.Equals, 1);
 
             StockService service = new StockService(_webServiceUrl);
-            
+
             //Récupération de la liste des emplacements répondant au critère
             List<Emplacement> emplacementList = service.GetListEmplacement(criteria);
-            
+
         }
 
         /// <summary>
@@ -186,7 +210,7 @@ namespace DemoWebServices100.Gecomaes
             List<Order> orders = new List<Order>() { new Order("IdDepot", OrderType.Asc), new Order("Id", OrderType.Asc) };
 
             StockService service = new StockService(_webServiceUrl);
-            
+
             //Récupération de la liste des emplacements triée
             List<Emplacement> emplacementList = service.GetListEmplacement(orders: orders);
         }
@@ -198,13 +222,35 @@ namespace DemoWebServices100.Gecomaes
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 2;
-            int itemsByPage = 3;
-            
+            int itemsPerPage = 3;
+
             StockService service = new StockService(_webServiceUrl);
 
             //Récupération de la page de la liste des emplacements
-            List<Emplacement> emplacementList = service.GetListEmplacement(pageNumber: pageIndex, rowsPerPage: itemsByPage);
-            
+            List<Emplacement> emplacementList = service.GetListEmplacement(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste d'emplacements en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetEmplacementListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("IdDepot", ComparisonOperator.Equals, 1);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("IdDepot", OrderType.Asc), new Order("Id", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 2;
+            int itemsPerPage = 3;
+
+            StockService service = new StockService(_webServiceUrl);
+
+            //Récupération de la page de la liste des emplacements
+            List<Emplacement> emplacementList = service.GetListEmplacement(criteria, orders, pageIndex, itemsPerPage);
+
         }
 
         /// <summary>
@@ -219,7 +265,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste des emplacements du dépot
             List<Emplacement> emplacementList = service.GetListEmplacementByDepot(idDepot);
-            
+
         }
 
         #endregion
@@ -235,7 +281,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste des lot/série
             List<LotSerie> lotSerieList = service.GetListLotSerie();
-            
+
         }
 
         /// <summary>
@@ -247,10 +293,10 @@ namespace DemoWebServices100.Gecomaes
             Criteria criteria = new CriteriaComparison("EstEpuise", ComparisonOperator.Equals, false);
 
             StockService service = new StockService(_webServiceUrl);
-            
+
             //Récupération de la liste des lot/série répondant au critère
             List<LotSerie> lotSerieList = service.GetListLotSerie(criteria);
-            
+
         }
 
         /// <summary>
@@ -262,10 +308,10 @@ namespace DemoWebServices100.Gecomaes
             List<Order> orders = new List<Order>() { new Order("NumLotSerie", OrderType.Desc) };
 
             StockService service = new StockService(_webServiceUrl);
-            
+
             //Récupération de la liste des lot/série triée
             List<LotSerie> lotSerieList = service.GetListLotSerie(orders: orders);
-            
+
         }
 
         /// <summary>
@@ -274,14 +320,36 @@ namespace DemoWebServices100.Gecomaes
         public void GetLotSerieListPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
-            int pageNumber = 3;
-            int rowPerPage = 5;
+            int pageIndex = 3;
+            int itemsPerPage = 5;
 
             StockService service = new StockService(_webServiceUrl);
 
             //Récupération de la page de la liste des lot/série
-            List<LotSerie> lotSerieList = service.GetListLotSerie(pageNumber: pageNumber, rowsPerPage: rowPerPage);
-            
+            List<LotSerie> lotSerieList = service.GetListLotSerie(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une la liste des lot/série en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetLotSerieListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("EstEpuise", ComparisonOperator.Equals, false);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumLotSerie", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 5;
+
+            StockService service = new StockService(_webServiceUrl);
+
+            //Récupération de la page de la liste des lot/série
+            List<LotSerie> lotSerieList = service.GetListLotSerie(criteria, orders, pageIndex, itemsPerPage);
+
         }
 
         /// <summary>
@@ -296,7 +364,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste des lot/série de l'article
             List<LotSerie> lotSerieList = service.GetListLotSerieByRefArticle(refArticle);
-            
+
         }
 
         #endregion
@@ -342,7 +410,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération des stocks de dépot
             List<StockDepot> stockDepotList = service.GetListStock();
-            
+
         }
 
         /// <summary>
@@ -354,10 +422,10 @@ namespace DemoWebServices100.Gecomaes
             Criteria criteria = new CriteriaComparison("QteStock", ComparisonOperator.GreaterThan, 10);
 
             StockService service = new StockService(_webServiceUrl);
-            
+
             //Récupération de la liste des stocks d'article par dépot
             List<StockDepot> stockDepotList = service.GetListStock(criteria);
-            
+
         }
 
         /// <summary>
@@ -369,10 +437,10 @@ namespace DemoWebServices100.Gecomaes
             List<Order> orders = new List<Order>() { new Order("QteStock", OrderType.Asc) };
 
             StockService service = new StockService(_webServiceUrl);
-            
+
             //Récupération de la liste des stock d'article par dépot
             List<StockDepot> stockDepotList = service.GetListStock(orders: orders);
-            
+
         }
 
         /// <summary>
@@ -381,14 +449,37 @@ namespace DemoWebServices100.Gecomaes
         public void GetStockDepotListPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 5;
             int itemByPage = 6;
-            int pageNumber = 5;
 
             StockService service = new StockService(_webServiceUrl);
 
             //Récupération de la page de la liste des stocks d'article par dépot
-            List<StockDepot> stockDepotList = service.GetListStock(pageNumber: pageNumber, rowsPerPage: itemByPage);
-            
+            List<StockDepot> stockDepotList = service.GetListStock(pageNumber: pageIndex, rowsPerPage: itemByPage);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste des stocks d'article par dépot en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetStockDepotListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("QteStock", ComparisonOperator.GreaterThan, 10);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("QteStock", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 5;
+            int itemsPerPage = 6;
+
+
+            StockService service = new StockService(_webServiceUrl);
+
+            //Récupération de la liste des stocks d'article par dépot
+            List<StockDepot> stockDepotList = service.GetListStock(criteria, orders, pageIndex, itemsPerPage);
+
         }
 
         /// <summary>
@@ -400,7 +491,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste des stocks dépot des articles à gamme
             List<StockDepot> stockDepotList = service.GetListStockGamme();
-            
+
         }
 
         /// <summary>
@@ -412,10 +503,10 @@ namespace DemoWebServices100.Gecomaes
             Criteria criteria = new CriteriaComparison("QteMini", ComparisonOperator.LessThan, 15);
 
             StockService service = new StockService(_webServiceUrl);
-            
+
             //Récupération des stocks de dépot des articles à gamme répondant au critère
             List<StockDepot> stockDepotList = service.GetListStockGamme(criteria);
-            
+
         }
 
         /// <summary>
@@ -427,10 +518,10 @@ namespace DemoWebServices100.Gecomaes
             List<Order> orders = new List<Order>() { new Order("QteStock", OrderType.Asc) };
 
             StockService service = new StockService(_webServiceUrl);
-            
+
             //Récupération de la liste triée des stock de dépot d'article à gamme
             List<StockDepot> stockDepotList = service.GetListStockGamme(orders: orders);
-            
+
         }
 
         /// <summary>
@@ -439,14 +530,14 @@ namespace DemoWebServices100.Gecomaes
         public void GeStockDepotArticleGammeListPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
-            int pageNumber = 5;
-            int rowPerPage = 4;
+            int pageIndex = 5;
+            int itemsPerPage = 4;
 
             StockService service = new StockService(_webServiceUrl);
 
             //Récupération de la page de la liste des stock de dépot d'article à gamme
-            List<StockDepot> stockDepotList = service.GetListStockGamme(rowsPerPage: rowPerPage, pageNumber: pageNumber);
-            
+            List<StockDepot> stockDepotList = service.GetListStockGamme(rowsPerPage: itemsPerPage, pageNumber: pageIndex);
+
         }
 
         #endregion
@@ -466,7 +557,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération des stocks d'emplacement de l'article standard sur le dépot
             List<StockEmplacement> stockEmplacementList = service.GetListStockEmplacement(refArticle, idDepot);
-            
+
         }
 
         /// <summary>
@@ -475,7 +566,7 @@ namespace DemoWebServices100.Gecomaes
         public void GetStockEmplacementListArticleGamme()
         {
             //Définition de la référence d'article, de ses gammes et du dépot
-            string refArticle = "CHAAR/VAR";           
+            string refArticle = "CHAAR/VAR";
             int idGamme1 = 6;
             int idGamme2 = 7;
             int idDepot = 1;
@@ -484,7 +575,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste des stocks d'emplacement de l'article à gamme sur le dépot
             List<StockEmplacement> stockEmplacementList = service.GetListStockEmplacement(refArticle, idDepot, idGamme1, idGamme2);
-            
+
         }
 
         /// <summary>
@@ -517,7 +608,7 @@ namespace DemoWebServices100.Gecomaes
             //Définition du dépot et de l'emplacement
             int idDepot = 1;
             int idEmplacement = 19;
-            
+
             StockService service = new StockService(_webServiceUrl);
 
             //Récupération du stock d'emplacement

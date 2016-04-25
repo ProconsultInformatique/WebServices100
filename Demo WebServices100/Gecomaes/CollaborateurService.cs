@@ -90,12 +90,12 @@ namespace DemoWebServices100.Gecomaes
         public void GetCollaborateurListOrdered()
         {
             //Définition du tri
-            List<Order> methodeTri = new List<Order>() { new Order("CodePostal", OrderType.Desc) };
+            List<Order> orders = new List<Order>() { new Order("CodePostal", OrderType.Desc) };
 
             CollaborateurService service = new CollaborateurService(_webServiceUrl);
 
             //Récupération de la liste de collaborateurs triée 
-            List<Collaborateur> collaborateurList = service.GetList(orders: methodeTri);
+            List<Collaborateur> collaborateurList = service.GetList(orders: orders);
 
         }
 
@@ -105,13 +105,36 @@ namespace DemoWebServices100.Gecomaes
         public void GetCollaborateurListPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
-            int pageNumber = 2;
-            int rowPerPage = 3;
+            int pageIndex = 2;
+            int itemsPerPage = 3;
 
             CollaborateurService service = new CollaborateurService(_webServiceUrl);
 
             //Récupération de la page de liste de collaborateur
-            List<Collaborateur> collaborateurList = service.GetList(pageNumber: pageNumber, rowsPerPage: rowPerPage);
+            List<Collaborateur> collaborateurList = service.GetList(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une page de liste de collaborateurs comprenant l'ensemble des paramètres.
+        /// </summary>
+        public void GetCollaborateurListComplex()
+        {
+
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Fonction", ComparisonOperator.Like, "Repré%");
+
+            //Définition du tri
+            List<Order> orders = new List<Order>() { new Order("CodePostal", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 2;
+            int itemsPerPage = 3;
+
+            CollaborateurService service = new CollaborateurService(_webServiceUrl);
+
+            //Récupération de la page de liste de collaborateur
+            List<Collaborateur> collaborateurList = service.GetList(criteria, orders, pageIndex, itemsPerPage);
 
         }
 

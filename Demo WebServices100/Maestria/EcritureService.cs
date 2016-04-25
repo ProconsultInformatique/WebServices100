@@ -89,12 +89,12 @@ namespace DemoWebServices100.Maestria
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 3;
-            int rowsPerPage = 5;
+            int itemsPerPage = 5;
 
             EcritureService service = new EcritureService(_webServiceUrl);
 
             //Récupération de la page d'écritures comptables
-            List<Ecriture> ecritureList = service.GetListEcritures(rowsPerPage: rowsPerPage, pageNumber: pageIndex);
+            List<Ecriture> ecritureList = service.GetListEcritures(rowsPerPage: itemsPerPage, pageNumber: pageIndex);
 
         }
 
@@ -156,7 +156,7 @@ namespace DemoWebServices100.Maestria
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 4;
-            int rowsPerPage = 10;
+            int itemsPerPage = 10;
 
             //Définition du numéro de compte général
             string numCompteGeneral = "4010000";
@@ -164,7 +164,7 @@ namespace DemoWebServices100.Maestria
             EcritureService service = new EcritureService(_webServiceUrl);
 
             //Récupération de la page des écritures comptable
-            List<Ecriture> ecritureList = service.GetEcrituresByCompteGeneral(numCompteGeneral, pageNumber: pageIndex, rowsPerPage: rowsPerPage);
+            List<Ecriture> ecritureList = service.GetEcrituresByCompteGeneral(numCompteGeneral, pageNumber: pageIndex, rowsPerPage: itemsPerPage);
 
         }
 
@@ -230,7 +230,7 @@ namespace DemoWebServices100.Maestria
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 4;
-            int rowsPerPage = 10;
+            int itemsPerPage = 10;
 
             //Définition du code journal
             string codeJournal = "VTE";
@@ -238,7 +238,7 @@ namespace DemoWebServices100.Maestria
             EcritureService service = new EcritureService(_webServiceUrl);
 
             //Récupération de la liste des écritures
-            List<Ecriture> ecritureList = service.GetEcrituresByJournal(codeJournal, pageNumber: pageIndex, rowsPerPage: rowsPerPage);
+            List<Ecriture> ecritureList = service.GetEcrituresByJournal(codeJournal, pageNumber: pageIndex, rowsPerPage: itemsPerPage);
 
         }
 
@@ -303,8 +303,8 @@ namespace DemoWebServices100.Maestria
         public void GetEcritureListByCodeTiersPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
-            int pageNumber = 4;
-            int rowsPerPage = 10;
+            int pageIndex = 4;
+            int itemsPerPage = 10;
 
             //Définition du code tiers.
             string numTiers = "CARAT";
@@ -312,7 +312,7 @@ namespace DemoWebServices100.Maestria
             EcritureService service = new EcritureService(_webServiceUrl);
 
             //Récupération de la liste des écritures comptables
-            List<Ecriture> ecritureList = service.GetEcrituresByTiers(numTiers, pageNumber: pageNumber, rowsPerPage: rowsPerPage);
+            List<Ecriture> ecritureList = service.GetEcrituresByTiers(numTiers, pageNumber: pageIndex, rowsPerPage: itemsPerPage);
 
         }
 

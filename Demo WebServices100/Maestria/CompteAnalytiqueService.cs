@@ -58,13 +58,13 @@ namespace DemoWebServices100.Maestria
         public void GetCompteAnalytiqueListPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
-            int pageNumber = 3;
-            int itemByPage = 6;
+            int pageIndex = 3;
+            int itemsPerPage = 6;
 
             CompteAnalytiqueService service = new CompteAnalytiqueService(_webServiceUrl);
 
             //Récupération de la page de la liste des comptes analytiques
-            List<CompteAnalytique> compteAnalytiqueList = service.GetList(pageNumber:pageNumber,rowsPerPage:itemByPage);
+            List<CompteAnalytique> compteAnalytiqueList = service.GetList(pageNumber:pageIndex,rowsPerPage:itemsPerPage);
 
         }
 

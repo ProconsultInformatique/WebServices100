@@ -58,13 +58,13 @@ namespace DemoWebServices100.Maestria
         public void GetCompteGeneralListPaged()
         {
             //Définition de la page à obtenir et du nombre d'éléments par page
-            int pageNumber = 5;
-            int itemByPage = 8;
+            int pageIndex = 5;
+            int itemsByPage = 8;
 
             CompteGeneralService service = new CompteGeneralService(_webServiceUrl);
 
             //Récupération de la page de comptes généraux
-            List<CompteGeneral> compteGeneralList = service.GetList(pageNumber: pageNumber, rowsPerPage: itemByPage);
+            List<CompteGeneral> compteGeneralList = service.GetList(pageNumber: pageIndex, rowsPerPage: itemsByPage);
 
         }
 

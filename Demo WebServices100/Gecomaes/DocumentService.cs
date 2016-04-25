@@ -76,12 +76,12 @@ namespace DemoWebServices100.Gecomaes
         public void GetDocumentListOrdered()
         {
             //Définition de la méthode de tri
-            List<Order> methodeTri = new List<Order>() { new Order("NumeroTiers", OrderType.Desc) };
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Desc) };
 
             DocumentService service = new DocumentService(_webServiceUrl);
 
             //Récupération de la liste de document triée
-            List<Document> documentList = service.GetList(orders: methodeTri).ToList();
+            List<Document> documentList = service.GetList(orders: orders).ToList();
 
         }
 
@@ -91,13 +91,35 @@ namespace DemoWebServices100.Gecomaes
         public void GetDocumentListPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
-            int pageNumber = 3;
-            int rowPerPage = 5;
+            int pageIndex = 3;
+            int itemsPerPage = 5;
 
             DocumentService service = new DocumentService(_webServiceUrl);
 
             //Récupération de la page de liste de document
-            List<Document> documentList = service.GetList(pageNumber: pageNumber, rowsPerPage: rowPerPage).ToList();
+            List<Document> documentList = service.GetList(pageNumber: pageIndex, rowsPerPage: itemsPerPage).ToList();
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste de documents en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetDocumentListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Statut", ComparisonOperator.Equals, StatutDocument.Accepte);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 5;
+
+            DocumentService service = new DocumentService(_webServiceUrl);
+
+            //Récupération de la page de liste de document
+            List<Document> documentList = service.GetList(criteria, orders, pageIndex, itemsPerPage).ToList();
 
         }
 
@@ -145,18 +167,40 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de document d'achat
+        /// Méthode démontrant comment obtenir une page de liste de documents d'achat
         /// </summary>
         public void GetDocumentAchatListPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 3;
-            int docsPerPage = 5;
+            int itemsPerPage = 5;
 
             DocumentService service = new DocumentService(_webServiceUrl);
 
             //Récupération de la page de liste de document
-            List<DocumentAchat> documentList = service.GetListDocumentAchat(pageNumber: pageIndex, rowsPerPage: docsPerPage).ToList();
+            List<DocumentAchat> documentList = service.GetListDocumentAchat(pageNumber: pageIndex, rowsPerPage: itemsPerPage).ToList();
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste de documents d'achat en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetDocumentAchatListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Statut", ComparisonOperator.Equals, StatutDocument.Accepte);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 5;
+
+            DocumentService service = new DocumentService(_webServiceUrl);
+
+            //Récupération de la page de liste de document
+            List<DocumentAchat> documentList = service.GetListDocumentAchat(criteria, orders, pageIndex, itemsPerPage).ToList();
 
         }
 
@@ -210,12 +254,34 @@ namespace DemoWebServices100.Gecomaes
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 3;
-            int docsPerPage = 5;
+            int itemsPerPage = 5;
 
             DocumentService service = new DocumentService(_webServiceUrl);
 
             //Récupération de la page de liste de document
-            List<DocumentInterne> documentList = service.GetListDocumentInterne(pageNumber: pageIndex, rowsPerPage: docsPerPage).ToList();
+            List<DocumentInterne> documentList = service.GetListDocumentInterne(pageNumber: pageIndex, rowsPerPage: itemsPerPage).ToList();
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste de documents internes en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetDocumentInterneListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Statut", ComparisonOperator.Equals, StatutDocument.Accepte);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 5;
+
+            DocumentService service = new DocumentService(_webServiceUrl);
+
+            //Récupération de la liste de documents
+            List<DocumentInterne> documentList = service.GetListDocumentInterne(criteria, orders, pageIndex, itemsPerPage).ToList();
 
         }
 
@@ -278,6 +344,27 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
+        /// Méthode démontrant comment obtenir une liste de documents de stock en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetDocumentStockListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("TypeDocument", ComparisonOperator.Equals, TypeDocument.VirementDeDepotDepotStock);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 5;
+
+            DocumentService service = new DocumentService(_webServiceUrl);
+
+            //Récupération de la liste des documents de stock
+            List<DocumentStock> documentList = service.GetListDocumentStock(criteria, orders, pageIndex, itemsPerPage).ToList();
+
+        }
+        /// <summary>
         /// Méthode démontrant comment obtenir la liste des documents de vente
         /// </summary>
         public void GetDocumentVenteList()
@@ -336,6 +423,28 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
+        /// Méthode démontrant comment obtenir une liste de documents de vente en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetDocumentVenteListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Statut", ComparisonOperator.Equals, StatutDocument.Accepte);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 5;
+
+            DocumentService service = new DocumentService(_webServiceUrl);
+
+            //Récupération de la liste des documents de vente
+            List<DocumentVente> documentList = service.GetListDocumentVente(criteria, orders, pageIndex, itemsPerPage).ToList();
+
+        }
+
+        /// <summary>
         /// Méthode démontrant comment obtenir la liste des documents en cours d'un domaine
         /// </summary>
         public void GetDocumentListEnCoursByDomaine()
@@ -385,6 +494,29 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la page de la liste de document en cours
             IList<Document> documentList = service.GetListDocumentEnCoursByDomaine(domaine, pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir la liste des documents en cours en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetDocumentListEnCoursByDomaineComplex()
+        {
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("DateLivraison", OrderType.Asc) };
+
+            //Défintion de l'index de la page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 4;
+
+            //Définition du domaine de document
+            DomaineDocument domaine = DomaineDocument.Achat;
+
+            DocumentService service = new DocumentService(_webServiceUrl);
+
+            //Récupération de la page de la liste de document en cours
+            IList<Document> documentList = service.GetListDocumentEnCoursByDomaine(domaine, orders, pageIndex, itemsPerPage);
 
         }
 

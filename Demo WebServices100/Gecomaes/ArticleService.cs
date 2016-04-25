@@ -27,7 +27,7 @@ namespace DemoWebServices100.Gecomaes
         /// <summary>
         /// Méthode démontrant comment obtenir la liste de tous les articles
         /// </summary>
-        public void GetAllArticleList()
+        public void GetArticleList()
         {
             ArticleService service = new ArticleService(_webServiceUrl);
 
@@ -39,7 +39,7 @@ namespace DemoWebServices100.Gecomaes
         /// <summary>
         /// Méthode démontrant comment obtenir une liste d'article selon un critère
         /// </summary>
-        public void GetAllArticleListByCriteria()
+        public void GetArticleListByCriteria()
         {
             //Création du critère
             string codeFamille = "BIJOUXOR";
@@ -54,32 +54,55 @@ namespace DemoWebServices100.Gecomaes
         /// <summary>
         /// Méthode démontrant comment obtenir une liste d'article triée
         /// </summary>
-        public void GetAllArticleOrderByReference()
+        public void GetArticleListOrdered()
         {
             //Creation du tri
-            List<Order> methodeTri = new List<Order>() { new Order { FieldName = "Reference", OrderType = OrderType.Desc } };
+            List<Order> orders = new List<Order>() { new Order { FieldName = "Reference", OrderType = OrderType.Desc } };
 
             ArticleService service = new ArticleService(_webServiceUrl);
 
             //Récupération de la liste d'articles triée
-            IList<Article> articleList = service.GetList(orders: methodeTri);
-            
+            IList<Article> articleList = service.GetList(orders: orders);
+
         }
 
         /// <summary>
         /// Méthode démontrant comment obtenir une page de liste d'article
         /// </summary>
-        public void GetPageListArticle()
+        public void GetArticleListPaged()
         {
-            //Définition de la page et du nombre d'article par page
+            //Définition de 'index de la page et du nombre d'éléments par page
             int itemByPage = 10;
-            int pageNumber = 2;
+            int pageIndex = 2;
 
             ArticleService service = new ArticleService(_webServiceUrl);
 
             //Récupération de la page de liste d'article
-            IList<Article> articleList = service.GetList(pageNumber: pageNumber, rowsPerPage: itemByPage);
-            
+            IList<Article> articleList = service.GetList(pageNumber: pageIndex, rowsPerPage: itemByPage);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste d'articles en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetArticleListComplex()
+        {
+            //Création du critère
+            string codeFamille = "BIJOUXOR";
+            Criteria criteria = new CriteriaComparison("CodeFamille", ComparisonOperator.Equals, codeFamille);
+
+            //Creation du tri
+            List<Order> order = new List<Order>() { new Order { FieldName = "Reference", OrderType = OrderType.Desc } };
+
+            //Définition de l'index de la page et du nombre d'éléments par page
+            int pageIndex = 2;
+            int itemsPerPage = 10;
+
+            ArticleService service = new ArticleService(_webServiceUrl);
+
+            //Récupération de la page de liste d'article
+            IList<Article> articleList = service.GetList(criteria, order, pageIndex, itemsPerPage);
+
         }
 
         /// <summary>
@@ -91,10 +114,10 @@ namespace DemoWebServices100.Gecomaes
             string refArticle = "CHAOR42";
 
             ArticleService service = new ArticleService(_webServiceUrl);
-            
+
             //Récupération de l'article
             Article article = service.GetArticle(refArticle);
-            
+
         }
 
         /// <summary>
@@ -111,7 +134,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération du nombre d'article répondant au critère
             int count = service.GetCount(criteria);
-            
+
         }
 
         /// <summary>
@@ -141,7 +164,7 @@ namespace DemoWebServices100.Gecomaes
             string refArticle = "CHAOR42";
 
             ArticleService service = new ArticleService(_webServiceUrl);
-            
+
             //Récupération de l'article depuis la base
             Article article = service.GetArticle(refArticle);
 

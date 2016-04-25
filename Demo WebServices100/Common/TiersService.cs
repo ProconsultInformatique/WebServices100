@@ -60,12 +60,12 @@ namespace DemoWebServices100.Common
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 1;
-            int rowsPerPage = 10;
+            int itemsPerPage = 10;
 
             TiersService service = new TiersService(_webServiceUrl);
 
             //Récupération de la page de la liste de tiers
-            IList<Tiers> tiers = service.GetList(pageNumber: pageIndex, rowsPerPage: rowsPerPage);
+            IList<Tiers> tiers = service.GetList(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
             
         }
 
@@ -205,29 +205,8 @@ namespace DemoWebServices100.Common
             //Récupération du tiers
             Tiers tiers = service.GetTiers(numTiers);
 
-            //TODO voir les modifications
             //Modification du tiers
-            tiers.Intitule = "toto";
-            tiers.Adresse = "toto";
-            tiers.CodeEdi = "toto";
-            tiers.CodePostal = "toto";
-            tiers.Commentaire = "toto";
-            tiers.Complement = "toto";
-            tiers.Contact = "toto";
-            tiers.Email = "toto";
-            tiers.Fax = "toto";
-            tiers.NumeroTva = "toto";
-            tiers.Pays = "toto";
-            tiers.Qualite = "toto";
-            tiers.Region = "toto";
-            tiers.NumeroSiret = "toto";
-            tiers.SiteWeb = "toto";
-            tiers.Telephone = "toto";
-            tiers.Ville = "toto";
-            tiers.IdModeExpedition = 2;
-            tiers.IdConditionLivraison = 2;
-            tiers.IdCategorieTarifaire = 2;
-            tiers.IdCategorieComptable = 2;
+            tiers.Intitule += "_Updated";
 
             //Mise à jour du tiers
             Tiers tiersFromDb = service.Update(tiers);

@@ -129,7 +129,7 @@ namespace DemoWebServices100.Common
         /// <summary>
         /// Méthode démontrant comment obtenir un contact de tiers
         /// </summary>
-        public void GetContactTiers_Exist_Data_Ok()
+        public void GetContactTiersByNumTiers_IndexContact()
         {
             //Définition du tiers et de l'identifiant du contact
             string numTiers = "BAGUES";

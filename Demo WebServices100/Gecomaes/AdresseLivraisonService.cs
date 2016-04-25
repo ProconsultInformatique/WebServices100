@@ -70,7 +70,7 @@ namespace DemoWebServices100.Gecomaes
         /// <summary>
         /// Méthode démontrant comment obtenir une page de liste d'adresses de livraison
         /// </summary>
-        public void GetAdresseLivraisonListPage()
+        public void GetAdresseLivraisonListPaged()
         {
             //Définition de l'index de la page et du nombre d'élément par page
             int pageIndex = 2;
@@ -86,7 +86,7 @@ namespace DemoWebServices100.Gecomaes
         /// <summary>
         /// Méthode démontrant comment obtenir une liste d'adresse de livraison triée par une propriété
         /// </summary>
-        public void GetAdresseLivraisonListeOrdered()
+        public void GetAdresseLivraisonListOrdered()
         {
             //Définition de la méthode de tri
             List<Order> ordersAsc = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
@@ -95,6 +95,28 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste d'adresses de livraison triée
             IList<AdresseLivraison> AdresseLivraisonAsc = service.GetList(orders: ordersAsc);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste d'adresse de livraison en combinant l'ensemble des paramètres.
+        /// </summary>
+        public void GetAdresseLivraisonListComplex()
+        {
+            //Définition de la méthode de tri
+            List<Order> ordersAsc = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            //Définition de l'index de la page et du nombre d'élément par page
+            int pageIndex = 2;
+            int itemsPerPage = 10;
+
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Pays", ComparisonOperator.Like, "France");
+
+            AdresseLivraisonService service = new AdresseLivraisonService(_webServiceUrl);
+
+            //Récupération de la liste d'adresses de livraison
+            IList<AdresseLivraison> AdresseLivraisonAsc = service.GetList(criteria, ordersAsc, pageIndex, itemsPerPage);
 
         }
 
@@ -127,7 +149,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de l'adresse de livraison
             AdresseLivraison AdresseLivraison = service.GetAdresseLivraison(idTiers, idAdresse);
-            
+
         }
 
 
@@ -136,22 +158,20 @@ namespace DemoWebServices100.Gecomaes
         /// </summary>
         public void InsertAdresseLivraison()
         {
-            //TODO mettre adresse proconsult et dimuzio
-            
             //Définition de l'adresse de livraison à insérer
             AdresseLivraison adresse = new AdresseLivraison();
             adresse.Id = 0;
-            adresse.Intitule = "Toto test adLivr";
-            adresse.Contact = "Tutu toto";
-            adresse.Adresse = "Rue de la canne";
+            adresse.Intitule = "Toto Intitule ";
+            adresse.Contact = "Di Muzio Valerian";
+            adresse.Adresse = "Rue de la liberation 17";
             adresse.Complement = "boite 3";
-            adresse.CodePostal = "1199";
-            adresse.Ville = "Brechen";
+            adresse.CodePostal = "3510";
+            adresse.Ville = "Dudelange";
             adresse.Pays = "Luxembourg";
             adresse.Region = "Luxembourg";
-            adresse.Fax = "+352 22 33 44 55";
-            adresse.Telephone = "+352 22 33 44 66";
-            adresse.Email = "info@testWebServices.com";
+            adresse.Fax = "+352 26 31 32 51";
+            adresse.Telephone = "+352 26 31 32 51";
+            adresse.Email = "info@proconsult.lu";
             adresse.NumeroTiers = "BAGUES";
 
             AdresseLivraisonService service = new AdresseLivraisonService(_webServiceUrl);

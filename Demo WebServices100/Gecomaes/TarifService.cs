@@ -76,12 +76,34 @@ namespace DemoWebServices100.Gecomaes
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 3;
-            int itemPerPage = 6;
+            int itemsPerPage = 6;
 
             TarifService service = new TarifService(_webServiceUrl);
 
             //Récupération de la page de tarifs d'article
-            List<TarifArticle> tarifArticleList = service.GetListTarifArticles(pageNumber: pageIndex, rowsPerPage: itemPerPage);
+            List<TarifArticle> tarifArticleList = service.GetListTarifArticles(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste de tarifs d'article en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetTarifArticleListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("RefArticle", ComparisonOperator.Like, "%10%");
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("PrixVente", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 6;
+
+            TarifService service = new TarifService(_webServiceUrl);
+
+            //Récupération de la liste de tarifs d'article
+            List<TarifArticle> tarifArticleList = service.GetListTarifArticles(criteria, orders, pageIndex, itemsPerPage);
 
         }
 
@@ -155,6 +177,28 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la page de tarifs client
             List<TarifClient> tarifClientList = service.GetListTarifClients(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste de tarifs client en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetTarifClientListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("TypePrix", ComparisonOperator.Equals, TypePrix.TTC);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("PrixVente", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 2;
+            int itemsPerPage = 2;
+
+            TarifService service = new TarifService(_webServiceUrl);
+
+            //Récupération de la liste de tarifs client
+            List<TarifClient> tarifClientList = service.GetListTarifClients(criteria, orders, pageIndex, itemsPerPage);
 
         }
 
@@ -233,6 +277,28 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
+        /// Méthode démontrant comment obtenir une liste de tarifs fournisseur en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetTarifFournisseurListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("PrixAchat", ComparisonOperator.GreaterThanOrEqualTo, 27M);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("IdFournisseur", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 5;
+
+            TarifService service = new TarifService(_webServiceUrl);
+
+            //Récupération de la page de tarifs fournisseur
+            List<TarifFournisseur> tarifFournisseurList = service.GetListTarifFournisseursCritere(criteria, orders, pageIndex, itemsPerPage);
+
+        }
+
+        /// <summary>
         /// Méthode démontrant comment obtenir le tarif article d'un article par sa référence et sa catégorie tarifaire.
         /// </summary>
         public void GetTarifArticleByRefArticle_IdCatTarifaire()
@@ -291,7 +357,7 @@ namespace DemoWebServices100.Gecomaes
         {
             //Définition de la référence d'article et de la référence du tiers
             string refArticle = "BRAAR10";
-            string numTiers = "CLIENT2";//TODO prendre un fournisseur Bijou
+            string numTiers = "CARAT";
 
             TarifService service = new TarifService(_webServiceUrl);
 
@@ -304,7 +370,7 @@ namespace DemoWebServices100.Gecomaes
         /// Méthode démontrant comment obtenir le tarif client d'un article à gamme 
         /// par sa référence d'article, ses identifiants de gamme et sa référence client.
         /// </summary>
-        public void GetTarifClientGamme1Gamme_Execute_Ok()
+        public void GetTarifClientGammeIdGamme1()
         {
             //Définition de la référence d'article, de l'identifiant de gamme et du numéro de client
             string refArticle = "BAOR01";
@@ -322,7 +388,7 @@ namespace DemoWebServices100.Gecomaes
         /// Méthode démontrant comment obtenir le tarif client d'un article à gamme 
         /// par sa référence d'article, ses intitulés de gamme et sa référence client.
         /// </summary>
-        public void GetTarifClientGammeIntitule1Gamme_Execute_Ok()
+        public void GetTarifClientGammeIntituleGamme1()
         {
             //Définition de la référence d'article, de l'intitulé de gamme et du numéro de client
             string refArticle = "BAOR01";
@@ -450,7 +516,7 @@ namespace DemoWebServices100.Gecomaes
         {
             //Définition de la référence article et de la référence client
             string refArticle = "BRAAR10";
-            string numeroTiers = "CLIENT2";//TODO prendre un client Bijou
+            string numeroTiers = "CARAT";
 
             TarifService service = new TarifService(_webServiceUrl);
 

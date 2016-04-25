@@ -89,12 +89,12 @@ namespace DemoWebServices100.Maestria
         {
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 2;
-            int rowsPerPage = 6;
+            int itemsPerPage = 6;
             
             JournalService service = new JournalService(_webServiceUrl);
 
             //Récupération de la page de journaux
-            List<Journal> journalList = service.GetList(rowsPerPage: rowsPerPage, pageNumber: pageIndex);
+            List<Journal> journalList = service.GetList(rowsPerPage: itemsPerPage, pageNumber: pageIndex);
             
         }
 

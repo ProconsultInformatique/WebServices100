@@ -33,7 +33,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste des familles
             List<Famille> familleList = service.GetList();
-            
+
         }
 
         /// <summary>
@@ -45,10 +45,10 @@ namespace DemoWebServices100.Gecomaes
             Criteria criteria = new CriteriaComparison("Intitule", ComparisonOperator.Like, "MONTRE%");
 
             FamilleService service = new FamilleService(_webServiceUrl);
-            
+
             //Récupération de la liste des familles répondant au critère
             List<Famille> familleList = service.GetList(criteria);
-            
+
         }
 
         /// <summary>
@@ -57,14 +57,14 @@ namespace DemoWebServices100.Gecomaes
         public void GetFamilleListPaged()
         {
             //Définition de l'index de page et du nombre d'éléments par page
-            int pageNumber = 2;
-            int itemByPage = 5;
+            int pageIndex = 2;
+            int itemsPerPage = 5;
 
             FamilleService service = new FamilleService(_webServiceUrl);
 
             //Récupération de la page de la liste des familles
-            List<Famille> familleList = service.GetList(pageNumber: pageNumber, rowsPerPage: itemByPage);
-            
+            List<Famille> familleList = service.GetList(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
         }
 
         /// <summary>
@@ -79,7 +79,29 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste de familles triée
             List<Famille> familleList = service.GetList(orders: orders);
-            
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste de familles en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetFamilleListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Intitule", ComparisonOperator.Like, "MONTRE%");
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order() { FieldName = "Intitule", OrderType = OrderType.Desc } };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 2;
+            int itemsPerPage = 5;
+
+            FamilleService service = new FamilleService(_webServiceUrl);
+
+            //Récupération de la liste de familles
+            List<Famille> familleList = service.GetList(criteria, orders, pageIndex, itemsPerPage);
+
         }
 
         /// <summary>
@@ -94,7 +116,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la liste des familles du type
             List<Famille> familleList = service.GetByType(typeFamille);
-            
+
         }
 
         /// <summary>
@@ -109,10 +131,10 @@ namespace DemoWebServices100.Gecomaes
             TypeFamille typeFamille = TypeFamille.Detail;
 
             FamilleService service = new FamilleService(_webServiceUrl);
-            
+
             //Récupération de la liste de familles
             List<Famille> familleList = service.GetByType(typeFamille, orders);
-            
+
         }
 
         /// <summary>
@@ -131,7 +153,29 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la page de la liste de famille
             List<Famille> familleList = service.GetByType(typeFamille, pageNumber: pageIndex, rowsPerPage: itemsByPage);
-            
+
+        }
+
+        /// <summary>
+        /// Méthode démontrant comment obtenir une liste de famille par type en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetFamilleListByTypeComplex()
+        {
+            //Définition du type de famille
+            TypeFamille typeFamille = TypeFamille.Detail;
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 2;
+            int itemsByPage = 5;
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order() { FieldName = "Intitule", OrderType = OrderType.Desc } };
+
+            FamilleService service = new FamilleService(_webServiceUrl);
+
+            //Récupération de la liste de familles
+            List<Famille> familleList = service.GetByType(typeFamille, orders, pageIndex, itemsByPage);
+
         }
 
         /// <summary>
@@ -146,7 +190,7 @@ namespace DemoWebServices100.Gecomaes
 
             //Récupération de la famille
             Famille famille = service.GetFamille(codeFamille);
-            
+
         }
 
         #endregion

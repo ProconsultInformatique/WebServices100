@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DemoWebServices100.Gecomaes.AdresseLivraisonServiceDemo">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAIAQAAAIAAAABAAAAEAAAoAAgABEAEAAAAAA=</HashCode>
+      <FileName>Gecomaes\AdresseLivraisonService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.ArticleServiceDemo">
+    <Position X="6.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAQFBQEAAAAAADAAAACAIAAEAgigIAGAAAAAEAAggA=</HashCode>
+      <FileName>Gecomaes\ArticleService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.CategorieComptableServiceDemo">
+    <Position X="3.5" Y="4.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAMAAAAEAAEAABAAAAAAAiAAAgAAAAAAEAAA=</HashCode>
+      <FileName>Gecomaes\CategorieComptableService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.CategorieTarifaireServiceDemo">
+    <Position X="0.5" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAACAAAAAAAAAAAAgAAAAACAAAAAAAA=</HashCode>
+      <FileName>Gecomaes\CategorieTarifaireService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.CollaborateurServiceDemo">
+    <Position X="3.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAggAAgAAAAAAAAAAAAAACAAQAAgAAACIABAAADAAA=</HashCode>
+      <FileName>Gecomaes\CollaborateurService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.ConditionLivraisonServiceDemo">
+    <Position X="12.75" Y="8" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAEAAAABAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gecomaes\ConditionLivraisonService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.DocumentServiceDemo">
+    <Position X="9.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CgiMEFQAACEJQkoAAAAMAAISAAASgABEBMgmEANgAQE=</HashCode>
+      <FileName>Gecomaes\DocumentService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.FamilleServiceDemo">
+    <Position X="6.5" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAAIAAAAAAAEAAAAAAAAAAAAoAAAEAABAQIAAAQ=</HashCode>
+      <FileName>Gecomaes\FamilleService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.GammeServiceDemo">
+    <Position X="17.5" Y="8.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAAAAAAAAAEgA=</HashCode>
+      <FileName>Gecomaes\GammeService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.ModeExpeditionServiceDemo">
+    <Position X="0.5" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAACAAAgAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Gecomaes\ModeExpeditionService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.StockServiceDemo">
+    <Position X="17.5" Y="0.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>ABCAADQAAQiAACAgAMUAIAABAYgCjAGAIEAAgCAAECU=</HashCode>
+      <FileName>Gecomaes\StockService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Gecomaes.TarifServiceDemo">
+    <Position X="12.75" Y="0.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AQAiAACAAAAACIwHAgjCgIAAAgAIgkAAmEAGAAIAAAA=</HashCode>
+      <FileName>Gecomaes\TarifService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
