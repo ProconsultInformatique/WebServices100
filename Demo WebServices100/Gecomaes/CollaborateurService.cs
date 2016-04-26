@@ -2,6 +2,7 @@
 using WebServices100.Proxy;
 using WebServices100.Model.DataContract;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DemoWebServices100.Gecomaes
 {
@@ -146,28 +147,28 @@ namespace DemoWebServices100.Gecomaes
             //Définition du collaborateur à insérer
             Collaborateur collaborateur = new Collaborateur()
             {
-                Matricule = "AABB",
-                Adresse = "71 rue de la canne",
+                Matricule = "PROINFO",
+                Adresse = "Rue de la Libération 17",
                 CodePostal = "L3510",
                 Complement = string.Empty,
-                Email = "EricPinon@yahoo.com",
+                Email = "Info@Proconsult.lu",
                 EstAcheteur = false,
                 EstCaissier = false,
                 EstChargeRecouvrement = true,
                 EstControleur = false,
                 EstResponsableFinancier = false,
                 EstVendeur = true,
-                Fax = "00.00.00.00",
-                Fonction = "Testeur",
+                Fax = "+352 26 31 32 51",
+                Fonction = "Gérant",
                 Gsm = "03.12.21",
-                Nom = "PINON",
+                Nom = "Di Muzio",
                 Pays = "Luxembourg",
-                Prenom = "Eric",
+                Prenom = "Valerian",
                 Service = "Achat",
-                Telephone = "352525252",
-                Ville = "Mismak"
+                Telephone = "+352 26 31 32 51",
+                Ville = "Dudelange"
             };
-
+            
             CollaborateurService service = new CollaborateurService(_webServiceUrl);
 
             //Insertion du collaborateur
@@ -208,6 +209,39 @@ namespace DemoWebServices100.Gecomaes
 
             //Suppression du collaborateur dans la base
             service.Delete(idCollaborateur);
+
+        }
+
+        #endregion
+
+        #region Méthodes métiers
+
+        /// <summary>
+        /// Cette méthode montre comment mettre à jour l'adresse d'un collaborateur.
+        /// </summary>
+        public void DemonstrationMiseAJourCollaborateur()
+        {
+            //Définition du critère
+            Criteria critereNom = new CriteriaComparison("Nom", ComparisonOperator.Equals, "CHEVALIER");
+            Criteria criterePrenom = new CriteriaComparison("Prenom", ComparisonOperator.Equals, "Eric");
+            Criteria criteria = new CriteriaLogical(critereNom, LogicalOperator.And, criterePrenom);
+
+            CollaborateurService service = new CollaborateurService(_webServiceUrl);
+
+            Collaborateur collaborateur = service.GetList(criteria).FirstOrDefault();
+
+            collaborateur.CodePostal = "L3510";
+            collaborateur.Adresse = "17 Rue de la Libération";
+            collaborateur.Email = "Info@Proconsult.lu";
+            collaborateur.Fax = "+352 26 31 32 51";
+            collaborateur.Telephone = "+352 26 31 32 51";
+            collaborateur.Ville = "Dudelange";
+
+            collaborateur = service.Update(collaborateur);
+        }
+
+        public void DemonstrationSuppressionCollaborateur()
+        {
 
         }
 

@@ -236,10 +236,30 @@ namespace DemoWebServices100.Gecomaes
             //Récupération des adresses de livraison du tiers non principales
             List<AdresseLivraison> adresseLivraisonList = service.GetListByTiers(idTiers).Where(o => o.EstPrincipale == false).ToList();
 
-            //Suppression des adresses de livraison
+            //Suppression des adresses de livraison dans la base
             foreach (AdresseLivraison adresseLivraison in adresseLivraisonList)
                 service.Delete(adresseLivraison.NumeroTiers, adresseLivraison.Id);
 
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment mettre à jour l'adresse de livraison principale d'un tiers.
+        /// </summary>
+        public void DemonstrationMiseAJourAdressePrincipale()
+        {
+            //Définition du numéro de tiers
+            string idTiers = "CARAT";
+
+            AdresseLivraisonService service = new AdresseLivraisonService(_webServiceUrl);
+
+            //Récupération de l'adresse de livraison principale du tiers
+            AdresseLivraison adresseLivraison = service.GetListByTiers(idTiers).FirstOrDefault(o => o.EstPrincipale == true);
+
+            //Modification de l'adresse
+            adresseLivraison.Complement = "Test mise à jour";
+
+            //Mise à jour de l'adresse dans la base
+            service.Update(adresseLivraison);
         }
 
         #endregion
