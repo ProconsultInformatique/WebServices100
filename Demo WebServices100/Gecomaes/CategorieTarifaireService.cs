@@ -25,7 +25,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des catégories tarifaires
+        /// Cette méthode montre comment obtenir la liste des catégories tarifaires.
         /// </summary>
         public void GetCategorieTarifaireList()
         {
@@ -38,7 +38,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une catégorie tarifaire par son identifiant
+        /// Cette méthode montre comment obtenir une catégorie tarifaire par son identifiant.
         /// </summary>
         public void GetCategorieTarifaireByIndice()
         {
@@ -53,7 +53,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une catégorie tarifaire par son nom
+        /// Cette méthode montre comment obtenir une catégorie tarifaire par son nom.
         /// </summary>
         public void GetCategorieTarifaireByName()
         {

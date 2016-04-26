@@ -26,7 +26,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des conditions de livraison
+        /// Cette méthode montre comment obtenir la liste des conditions de livraison.
         /// </summary>
         public void GetConditionLivraisonList()
         {
@@ -38,7 +38,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une condition de livraison par son identifiant
+        /// Cette méthode montre comment obtenir une condition de livraison par son identifiant.
         /// </summary>
         public void GetConditionLivraisonByIndice()
         {
@@ -53,7 +53,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une condition de livraison par son nom
+        /// Cette méthode montre comment obtenir une condition de livraison par son nom.
         /// </summary>
         public void GetConditionLivraisonByName()
         {

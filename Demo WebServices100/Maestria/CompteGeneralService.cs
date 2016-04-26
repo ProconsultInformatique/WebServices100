@@ -26,7 +26,7 @@ namespace DemoWebServices100.Maestria
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des comptes généraux
+        /// Cette méthode montre comment obtenir la liste des comptes généraux.
         /// </summary>
         public void GetCompteGeneralList()
         {
@@ -38,7 +38,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des comptes généraux selon un critère
+        /// Cette méthode montre comment obtenir la liste des comptes généraux selon un critère.
         /// </summary>
         public void GetCompteGeneralListByCriteria()
         {
@@ -53,7 +53,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page d'une liste de comptes généraux
+        /// Cette méthode montre comment obtenir une page d'une liste de comptes généraux.
         /// </summary>
         public void GetCompteGeneralListPaged()
         {
@@ -69,7 +69,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de comptes généraux triée sur une propriété
+        /// Cette méthode montre comment obtenir une liste de comptes généraux triée sur une propriété.
         /// </summary>
         public void GetCompteGeneralListOrdered()
         {
@@ -84,7 +84,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un compte général par son identifiant
+        /// Cette méthode montre comment obtenir un compte général par son identifiant.
         /// </summary>
         public void GetCompteGeneralById()
         {
@@ -100,8 +100,8 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un compte général sans utiliser 
-        /// le process de Sage pour alimenter les champs non renseignés
+        /// Cette méthode montre comment insérer un compte général sans utiliser 
+        /// le process de Sage pour alimenter les champs non renseignés.
         /// </summary>
         public void InsertCompteGeneralWithoutSageProcess()
         {
@@ -125,8 +125,8 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un compte général dans la base
-        /// en utilisant le process de Sage pour alimenter les champs non renseignés
+        /// Cette méthode montre comment insérer un compte général dans la base
+        /// en utilisant le process de Sage pour alimenter les champs non renseignés.
         /// </summary>
         public void InsertCompteGeneralWithSageProcess()
         {

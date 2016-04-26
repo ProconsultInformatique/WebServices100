@@ -26,7 +26,7 @@ namespace DemoWebServices100.Gecomaes
         #region Achat
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste catégorie comptable d'achat
+        /// Cette méthode montre comment obtenir la liste catégorie comptable d'achat.
         /// </summary>
         public void GetCategorieComptableAchatList()
         {
@@ -37,7 +37,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une catégorie comptable d'achat par son identifiant
+        /// Cette méthode montre comment obtenir une catégorie comptable d'achat par son identifiant.
         /// </summary>
         public void GetCategorieComptableAchatByIndice()
         {
@@ -51,7 +51,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une catégorie comptable d'achat par son nom
+        /// Cette méthode montre comment obtenir une catégorie comptable d'achat par son nom.
         /// </summary>
         public void GetCategorieComptableAchatByName()
         {
@@ -70,7 +70,7 @@ namespace DemoWebServices100.Gecomaes
         #region Vente
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des catégories comptable de vente
+        /// Cette méthode montre comment obtenir la liste des catégories comptable de vente.
         /// </summary>
         public void GetCategorieComptableVenteList()
         {
@@ -82,7 +82,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une catégorie comptable de vente par son identifiant
+        /// Cette méthode montre comment obtenir une catégorie comptable de vente par son identifiant.
         /// </summary>
         public void GetCategorieComptableVenteByIndice()
         {
@@ -97,7 +97,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une catégorie comptable de vente par son nom
+        /// Cette méthode montre comment obtenir une catégorie comptable de vente par son nom.
         /// </summary>
         public void GetCategorieComptableVenteByName()
         {
@@ -116,7 +116,7 @@ namespace DemoWebServices100.Gecomaes
         #region Stock
 
         /// <summary>
-        /// Méthode démontrant comment récupérer la liste des catégories comptable de stock
+        /// Cette méthode montre comment récupérer la liste des catégories comptable de stock.
         /// </summary>
         public void GetCategorieComptableStockList()
         {
@@ -128,7 +128,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment récupérer une catégorie comptable de stock par son identifiant
+        /// Cette méthode montre comment récupérer une catégorie comptable de stock par son identifiant.
         /// </summary>
         public void GetCategorieComptableStockByIndice()
         {
@@ -143,7 +143,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une catégorie de stock par son nom
+        /// Cette méthode montre comment obtenir une catégorie de stock par son nom.
         /// </summary>
         public void GetCategorieComptableStockByName()
         {

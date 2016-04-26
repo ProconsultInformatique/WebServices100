@@ -25,7 +25,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des gammes
+        /// Cette méthode montre comment obtenir la liste des gammes.
         /// </summary>
         public void GetGammeList()
         {
@@ -37,7 +37,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des gammes d'article (gamme 1) d'un article
+        /// Cette méthode montre comment obtenir la liste des gammes d'article (gamme 1) d'un article.
         /// </summary>
         public void GetGammeList1ByRefArticle()
         {
@@ -52,7 +52,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des gammes d'article (gamme 2) d'un article
+        /// Cette méthode montre comment obtenir la liste des gammes d'article (gamme 2) d'un article.
         /// </summary>
         public void GetGammeList2ByRefArticle()
         {

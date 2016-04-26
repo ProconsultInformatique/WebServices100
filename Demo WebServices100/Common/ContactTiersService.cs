@@ -26,7 +26,7 @@ namespace DemoWebServices100.Common
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des contacts de tiers
+        /// Cette méthode montre comment obtenir la liste des contacts de tiers.
         /// </summary>
         public void GetContactTiersList()
         {
@@ -38,7 +38,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des contacts d'un tiers
+        /// Cette méthode montre comment obtenir la liste des contacts d'un tiers.
         /// </summary>
         public void GetContactTiersListByIdTiers()
         {
@@ -53,7 +53,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des contacts de tiers répondant à un critère
+        /// Cette méthode montre comment obtenir la liste des contacts de tiers répondant à un critère.
         /// </summary>
         public void GetContactTiersListByCriteria()
         {
@@ -68,7 +68,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des contacts de tiers
+        /// Cette méthode montre comment obtenir une page de la liste des contacts de tiers.
         /// </summary>
         public void GetContactTiersListPaged()
         {
@@ -84,7 +84,29 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée de contacts de tiers
+        /// Cette méthode montre comment obtenir une liste des contacts de tiers en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetContactTiersListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Fonction", ComparisonOperator.Like, "Gérant");
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            ContactTiersService service = new ContactTiersService(_webServiceUrl);
+
+            //Récupération de la liste des contacts de tiers
+            IList<ContactTiers> contact = service.GetList(criteria, orders, pageIndex, itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste triée de contacts de tiers.
         /// </summary>
         public void GetContactTiersListOrdered()
         {
@@ -98,7 +120,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le nombre de contacts de tiers
+        /// Cette méthode montre comment obtenir le nombre de contacts de tiers.
         /// </summary>
         public void GetContactTiersListCount()
         {
@@ -112,7 +134,7 @@ namespace DemoWebServices100.Common
 
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le nombre de contacts de tiers répondant à un critère
+        /// Cette méthode montre comment obtenir le nombre de contacts de tiers répondant à un critère.
         /// </summary>
         public void GetContactTiersListCountByCriteria()
         {
@@ -127,7 +149,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un contact de tiers
+        /// Cette méthode montre comment obtenir un contact de tiers.
         /// </summary>
         public void GetContactTiersByNumTiers_IndexContact()
         {
@@ -143,7 +165,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un contact de tiers dans la base
+        /// Cette méthode montre comment insérer un contact de tiers dans la base.
         /// </summary>
         public void InsertContactTiers()
         {
@@ -159,7 +181,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment mettre à jour un contact de tiers dans la base
+        /// Cette méthode montre comment mettre à jour un contact de tiers dans la base.
         /// </summary>
         public void UpdateContactTiers()
         {
@@ -189,7 +211,7 @@ namespace DemoWebServices100.Common
 
 
         /// <summary>
-        /// Méthode démontrant comment supprimer un contact de tiers dans la base
+        /// Cette méthode montre comment supprimer un contact de tiers dans la base.
         /// </summary>
         public void DeleteContactTiers()
         {
@@ -204,6 +226,31 @@ namespace DemoWebServices100.Common
         }
 
         #endregion
+
+        #region Business
+
+        /// <summary>
+        /// Cette méthode montre une utilisation métier de ce service.
+        /// </summary>
+        public void UtilisationBusiness()
+        {
+            string numTiers = "BAGUES";
+
+            ContactTiersService service = new ContactTiersService(_webServiceUrl);
+
+            //Récupération de la liste des contacts du tiers
+            List<ContactTiers> contactList = service.GetListByTiers(numTiers);
+
+            List<ContactTiers> secretaireList = contactList.Where(o => o.Fonction == "Secretaire").ToList();
+
+            secretaireList.ForEach(o => o.Telephone = "+352 25 56 56 51");
+
+            secretaireList.ForEach(o => service.Update(o));
+
+        }
+
+        #endregion
+
 
         #region Privée
 

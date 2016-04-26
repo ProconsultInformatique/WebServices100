@@ -26,7 +26,7 @@ namespace DemoWebServices100.Common
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les colonnes d'infos libres de tiers.
+        /// Cette méthode montre comment obtenir les colonnes d'infos libres de tiers.
         /// </summary>
         public void GetInfosLibresTiers()
         {
@@ -39,7 +39,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les colonnes d'information libre d'article.
+        /// Cette méthode montre comment obtenir les colonnes d'information libre d'article.
         /// </summary>
         public void GetInfosLibresArticle()
         {
@@ -51,7 +51,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les colonnes d'informations libre de document.
+        /// Cette méthode montre comment obtenir les colonnes d'informations libre de document.
         /// </summary>
         public void GetInfosLibresDocument()
         {
@@ -63,7 +63,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les colonnes d'informations libre de ligne de document.
+        /// Cette méthode montre comment obtenir les colonnes d'informations libre de ligne de document.
         /// </summary>
         public void GetInfosLibresLigneDocument()
         {
@@ -75,7 +75,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les colonnes d'informations libre de compte général.
+        /// Cette méthode montre comment obtenir les colonnes d'informations libre de compte général.
         /// </summary>
         public void GetInfosLibresCompteGeneral()
         {
@@ -87,7 +87,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les colonnes d'informations libre d'écriture.
+        /// Cette méthode montre comment obtenir les colonnes d'informations libre d'écriture.
         /// </summary>
         public void GetInfosLibresEcriture()
         {

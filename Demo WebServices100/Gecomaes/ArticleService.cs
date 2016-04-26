@@ -25,7 +25,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes Articles
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste de tous les articles
+        /// Cette méthode montre comment obtenir la liste de tous les articles.
         /// </summary>
         public void GetArticleList()
         {
@@ -37,7 +37,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste d'article selon un critère
+        /// Cette méthode montre comment obtenir une liste d'article selon un critère.
         /// </summary>
         public void GetArticleListByCriteria()
         {
@@ -52,7 +52,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste d'article triée
+        /// Cette méthode montre comment obtenir une liste d'article triée.
         /// </summary>
         public void GetArticleListOrdered()
         {
@@ -67,7 +67,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste d'article
+        /// Cette méthode montre comment obtenir une page de liste d'article.
         /// </summary>
         public void GetArticleListPaged()
         {
@@ -83,7 +83,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste d'articles en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste d'articles en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetArticleListComplex()
         {
@@ -106,7 +106,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un article
+        /// Cette méthode montre comment obtenir un article par sa référence.
         /// </summary>
         public void GetArticleByReference()
         {
@@ -121,7 +121,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le nombre d'articles répondant à un critère
+        /// Cette méthode montre comment obtenir le nombre d'articles répondant à un critère.
         /// </summary>
         public void GetCountArticleByCriteria()
         {
@@ -138,7 +138,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment ajouter un article dans la base
+        /// Cette méthode montre comment ajouter un article dans la base.
         /// </summary>
         public void InsertArticle()
         {
@@ -156,7 +156,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment mettre à jour un article
+        /// Cette méthode montre comment mettre à jour un article.
         /// </summary>
         public void UpdateArticle()
         {
@@ -177,7 +177,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment supprimer un article
+        /// Cette méthode montre comment supprimer un article.
         /// </summary>
         public void DeleteArticle()
         {
@@ -196,7 +196,7 @@ namespace DemoWebServices100.Gecomaes
         #region Unité de vente
 
         /// <summary>
-        /// Méthode démontrant comment récupérer une unité de vente par son identifiant
+        /// Cette méthode montre comment récupérer une unité de vente par son identifiant.
         /// </summary>
         public void GetUniteVenteById()
         {
@@ -211,7 +211,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment récupérer une unité de vente par son nom
+        /// Cette méthode montre comment récupérer une unité de vente par son nom.
         /// </summary>
         public void GetUniteVenteByName()
         {
@@ -226,7 +226,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment récupérer la liste des unités de vente
+        /// Cette méthode montre comment récupérer la liste des unités de vente.
         /// </summary>
         public void GetUniteVenteList()
         {
@@ -242,7 +242,7 @@ namespace DemoWebServices100.Gecomaes
         #region Article fournisseur
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les données d'article fournisseur
+        /// Cette méthode montre comment obtenir les données d'article fournisseur.
         /// </summary>
         public void GetArticleFournisseur()
         {
@@ -258,7 +258,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste d'article fournisseur selon un critère
+        /// Cette méthode montre comment obtenir une liste d'article fournisseur selon un critère.
         /// </summary>
         public void GetArticleFournisseurListByCriteria()
         {
@@ -278,7 +278,7 @@ namespace DemoWebServices100.Gecomaes
         #region Statistiques
 
         /// <summary>
-        /// Méthode démontrant comment récupérer une statistique d'article
+        /// Cette méthode montre comment récupérer une statistique d'article.
         /// </summary>
         public void GetStatistiqueArticle()
         {
@@ -293,7 +293,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment récupérer la liste des statistiques d'article
+        /// Cette méthode montre comment récupérer la liste des statistiques d'article.
         /// </summary>
         public void GetStatistiqueList()
         {
@@ -309,7 +309,7 @@ namespace DemoWebServices100.Gecomaes
         #region Catalogue
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un catalogue par son identifiant
+        /// Cette méthode montre comment obtenir un catalogue par son identifiant.
         /// </summary>
         public void GetCatalogueById()
         {
@@ -324,7 +324,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les catalogues
+        /// Cette méthode montre comment obtenir les catalogues.
         /// </summary>
         public void GetCatalogueList()
         {
@@ -336,7 +336,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des catalogues enfants d'un catalogue
+        /// Cette méthode montre comment obtenir la liste des catalogues enfants d'un catalogue.
         /// </summary>
         public void GetCatalogueListByParentId()
         {
@@ -355,7 +355,7 @@ namespace DemoWebServices100.Gecomaes
         #region Nomenclature
 
         /// <summary>
-        /// Méthode démontrant comment récupérer la nomenclature d'un article
+        /// Cette méthode montre comment récupérer la nomenclature d'un article.
         /// </summary>
         public void GetNomenclature()
         {

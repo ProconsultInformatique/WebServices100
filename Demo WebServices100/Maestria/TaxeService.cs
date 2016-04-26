@@ -25,7 +25,7 @@ namespace DemoWebServices100.Maestria
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des taxes.
+        /// Cette méthode montre comment obtenir la liste des taxes.
         /// </summary>
         public void GetTaxeList()
         {
@@ -37,7 +37,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des taxes répondants à un critère.
+        /// Cette méthode montre comment obtenir la liste des taxes répondants à un critère.
         /// </summary>
         public void GetTaxeListByCriteria()
         {
@@ -52,7 +52,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée de taxe selon une propriété.
+        /// Cette méthode montre comment obtenir une liste triée de taxe selon une propriété.
         /// </summary>
         public void GetTaxeListOrdered()
         {
@@ -67,7 +67,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de taxe.
+        /// Cette méthode montre comment obtenir une page de liste de taxe.
         /// </summary>
         public void GetTaxeListPaged()
         {

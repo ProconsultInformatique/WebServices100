@@ -25,7 +25,7 @@ namespace DemoWebServices100.Gecomaes
         #region Dépot
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un dépot par son identifiant
+        /// Cette méthode montre comment obtenir un dépot par son identifiant.
         /// </summary>
         public void GetDepotById()
         {
@@ -40,7 +40,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des dépots
+        /// Cette méthode montre comment obtenir la liste des dépots.
         /// </summary>
         public void GetDepotList()
         {
@@ -52,7 +52,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de dépot répondant à un critère
+        /// Cette méthode montre comment obtenir une liste de dépot répondant à un critère.
         /// </summary>
         public void GetDepotListByCriteria()
         {
@@ -67,7 +67,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de dépot triée selon un propriété
+        /// Cette méthode montre comment obtenir une liste de dépot triée selon un propriété.
         /// </summary>
         public void GetDepotListOrdered()
         {
@@ -82,7 +82,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de dépot
+        /// Cette méthode montre comment obtenir une page de liste de dépots.
         /// </summary>
         public void GetDepotListPaged()
         {
@@ -99,7 +99,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de dépots en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de dépots en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetDepotListComplex()
         {
@@ -125,7 +125,7 @@ namespace DemoWebServices100.Gecomaes
         #region Emplacement
 
         /// <summary>
-        /// Méthode démontrant comment obtenir l'emplacement d'un dépot
+        /// Cette méthode montre comment obtenir l'emplacement d'un dépot.
         /// </summary>
         public void GetEmplacementDepot()
         {
@@ -141,7 +141,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir l'emplacement par défaut d'un article standard sur un dépot
+        /// Cette méthode montre comment obtenir l'emplacement par défaut d'un article standard sur un dépot.
         /// </summary>
         public void GetEmplacementDefautArticleStandard_Execute_Ok()
         {
@@ -157,7 +157,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir l'emplacement par défaut d'un article à gamme sur un dépot
+        /// Cette méthode montre comment obtenir l'emplacement par défaut d'un article à gamme sur un dépot.
         /// </summary>
         public void GetEmplacementDefautArticleGamme_Execute_Ok()
         {
@@ -175,7 +175,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des emplacements
+        /// Cette méthode montre comment obtenir la liste des emplacements.
         /// </summary>
         public void GetEmplacementList()
         {
@@ -187,7 +187,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des emplacements répondant à un critère
+        /// Cette méthode montre comment obtenir la liste des emplacements répondant à un critère.
         /// </summary>
         public void GetEmplacementListByCriteria()
         {
@@ -202,7 +202,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée selon une propriété des emplacements
+        /// Cette méthode montre comment obtenir une liste triée selon une propriété des emplacements.
         /// </summary>
         public void GetEmplacementListOrdered()
         {
@@ -216,7 +216,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des emplacements
+        /// Cette méthode montre comment obtenir une page de la liste des emplacements.
         /// </summary>
         public void GetEmplacementListPaged()
         {
@@ -232,7 +232,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste d'emplacements en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste d'emplacements en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetEmplacementListComplex()
         {
@@ -254,7 +254,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des emplacements d'un dépot
+        /// Cette méthode montre comment obtenir la liste des emplacements d'un dépot.
         /// </summary>
         public void GetEmplacementListByDepot()
         {
@@ -273,7 +273,7 @@ namespace DemoWebServices100.Gecomaes
         #region LotSerie
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des lot/série
+        /// Cette méthode montre comment obtenir la liste des lot/série.
         /// </summary>
         public void GetLotSerieList()
         {
@@ -285,7 +285,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des lot/série répondant à un critère
+        /// Cette méthode montre comment obtenir la liste des lot/série répondant à un critère.
         /// </summary>
         public void GetLotSerieListByCriteria()
         {
@@ -300,7 +300,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste triée suivant une propriété des lot/série
+        /// Cette méthode montre comment obtenir la liste triée suivant une propriété des lot/série.
         /// </summary>
         public void GetLotSerieListOrdered()
         {
@@ -315,7 +315,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des lot/série
+        /// Cette méthode montre comment obtenir une page de la liste des lot/série.
         /// </summary>
         public void GetLotSerieListPaged()
         {
@@ -331,7 +331,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une la liste des lot/série en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une la liste des lot/série en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetLotSerieListComplex()
         {
@@ -353,7 +353,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des lot/série d'une référence d'article
+        /// Cette méthode montre comment obtenir la liste des lot/série d'une référence d'article.
         /// </summary>
         public void GetLotSerieListByRefArticle()
         {
@@ -372,7 +372,7 @@ namespace DemoWebServices100.Gecomaes
         #region StockDepot
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le stock de dépot d'un article
+        /// Cette méthode montre comment obtenir le stock de dépot d'un article.
         /// </summary>
         public void GetStockDepotByRefArticleIdDepot()
         {
@@ -402,7 +402,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des stocks d'article par dépot
+        /// Cette méthode montre comment obtenir la liste des stocks d'article par dépot.
         /// </summary>
         public void GetStockDepotList()
         {
@@ -414,7 +414,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des stocks d'article par dépot répondant à un critère
+        /// Cette méthode montre comment obtenir la liste des stocks d'article par dépot répondant à un critère.
         /// </summary>
         public void GetStockDepotListByCriteria()
         {
@@ -429,7 +429,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des stocks d'article par dépot triée selon une propriété
+        /// Cette méthode montre comment obtenir la liste des stocks d'article par dépot triée selon une propriété.
         /// </summary>
         public void GetStockDepotListOrdered()
         {
@@ -444,7 +444,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des stocks d'article par dépot
+        /// Cette méthode montre comment obtenir une page de la liste des stocks d'article par dépot.
         /// </summary>
         public void GetStockDepotListPaged()
         {
@@ -460,7 +460,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste des stocks d'article par dépot en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste des stocks d'article par dépot en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetStockDepotListComplex()
         {
@@ -483,7 +483,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des stocks de dépot des articles à gamme
+        /// Cette méthode montre comment obtenir la liste des stocks de dépot des articles à gamme.
         /// </summary>
         public void GetStockDepotListGamme()
         {
@@ -495,7 +495,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des stocks de dépot d'article à gamme répondant à un critère
+        /// Cette méthode montre comment obtenir la liste des stocks de dépot d'article à gamme répondant à un critère.
         /// </summary>
         public void GeStockDepotArticleGammeListByCriteria()
         {
@@ -510,7 +510,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée selon une propriété de stock de dépot d'article à gamme
+        /// Cette méthode montre comment obtenir une liste triée selon une propriété de stock de dépot d'article à gamme.
         /// </summary>
         public void GeStockDepotArticleGammeListOrdered()
         {
@@ -525,7 +525,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des stocks de dépot d'article à gamme
+        /// Cette méthode montre comment obtenir une page de la liste des stocks de dépot d'article à gamme.
         /// </summary>
         public void GeStockDepotArticleGammeListPaged()
         {
@@ -545,7 +545,7 @@ namespace DemoWebServices100.Gecomaes
         #region StockEmplacement
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des stocks d'emplacement d'un article standard sur un dépot
+        /// Cette méthode montre comment obtenir la liste des stocks d'emplacement d'un article standard sur un dépot.
         /// </summary>
         public void GetStockEmplacementListArticleStandard()
         {
@@ -561,7 +561,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des stocks d'emplacement d'article à gamme sur un dépot
+        /// Cette méthode montre comment obtenir la liste des stocks d'emplacement d'article à gamme sur un dépot.
         /// </summary>
         public void GetStockEmplacementListArticleGamme()
         {
@@ -579,7 +579,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le stock d'emplacement d'un article standard
+        /// Cette méthode montre comment obtenir le stock d'emplacement d'un article standard.
         /// </summary>
         public void GetStockEmplacementByRefArticleStandardIdDepotIdEmplacement()
         {
@@ -596,7 +596,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le stock d'emplacement d'un article à gamme
+        /// Cette méthode montre comment obtenir le stock d'emplacement d'un article à gamme.
         /// </summary>
         public void GetStockEmplacementByRefArticleGammeIdDepotIdEmplacementIdGamme1IdGamme2()
         {

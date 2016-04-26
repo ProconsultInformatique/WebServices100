@@ -25,7 +25,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs d'article d'un article par sa référence.
+        /// Cette méthode montre comment obtenir la liste des tarifs d'article d'un article par sa référence.
         /// </summary>
         public void GetTarifArticleList()
         {
@@ -40,7 +40,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs article répondant à un critère.
+        /// Cette méthode montre comment obtenir la liste des tarifs article répondant à un critère.
         /// </summary>
         public void GetTarifArticleListByCriteria()
         {
@@ -55,7 +55,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée de tarifs d'article.
+        /// Cette méthode montre comment obtenir une liste triée de tarifs d'article.
         /// </summary>
         public void GetTarifArticleListOrdered()
         {
@@ -70,7 +70,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page d'une liste de tarifs d'article.
+        /// Cette méthode montre comment obtenir une page d'une liste de tarifs d'article.
         /// </summary>
         public void GetTarifArticleListPaged()
         {
@@ -86,7 +86,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de tarifs d'article en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de tarifs d'article en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetTarifArticleListComplex()
         {
@@ -108,7 +108,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs d'un client.
+        /// Cette méthode montre comment obtenir la liste des tarifs d'un client.
         /// </summary>
         public void GetTarifClientListByRefClient()
         {
@@ -123,7 +123,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs client.
+        /// Cette méthode montre comment obtenir la liste des tarifs client.
         /// </summary>
         public void GetTarifClientList()
         {
@@ -135,7 +135,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs client répondant à un critère.
+        /// Cette méthode montre comment obtenir la liste des tarifs client répondant à un critère.
         /// </summary>
         public void GetTarifClientListByCriteria()
         {
@@ -150,7 +150,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de tarifs client triée selon un propriété.
+        /// Cette méthode montre comment obtenir une liste de tarifs client triée selon un propriété.
         /// </summary>
         public void GetTarifClientListOrdered()
         {
@@ -165,7 +165,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de tarifs client.
+        /// Cette méthode montre comment obtenir une page de liste de tarifs client.
         /// </summary>
         public void GetTarifClientListPaged()
         {
@@ -181,7 +181,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de tarifs client en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de tarifs client en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetTarifClientListComplex()
         {
@@ -203,7 +203,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs fournisseur d'un article et d'un fournisseur.
+        /// Cette méthode montre comment obtenir la liste des tarifs fournisseur d'un article et d'un fournisseur.
         /// </summary>
         public void GetTarifFournisseurListByRefArticleAndRefFournisseur()
         {
@@ -219,7 +219,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs fournisseur.
+        /// Cette méthode montre comment obtenir la liste des tarifs fournisseur.
         /// </summary>
         public void GetTarifFournisseurList()
         {
@@ -231,7 +231,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs fournisseur répondant à un critère.
+        /// Cette méthode montre comment obtenir la liste des tarifs fournisseur répondant à un critère.
         /// </summary>
         public void GetTarifFournisseurListByCriteria()
         {
@@ -246,7 +246,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tarifs fournisseur triée selon une propriété.
+        /// Cette méthode montre comment obtenir la liste des tarifs fournisseur triée selon une propriété.
         /// </summary>
         public void GetTarifFournisseurListOrdered()
         {
@@ -261,7 +261,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de tarifs fournisseur.
+        /// Cette méthode montre comment obtenir une page de liste de tarifs fournisseur.
         /// </summary>
         public void GetTarifFournisseurListPaged()
         {
@@ -277,7 +277,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de tarifs fournisseur en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de tarifs fournisseur en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetTarifFournisseurListComplex()
         {
@@ -299,7 +299,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le tarif article d'un article par sa référence et sa catégorie tarifaire.
+        /// Cette méthode montre comment obtenir le tarif article d'un article par sa référence et sa catégorie tarifaire.
         /// </summary>
         public void GetTarifArticleByRefArticle_IdCatTarifaire()
         {
@@ -315,7 +315,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le tarif article d'un article à gamme par sa référence, ses identifiants de gamme et sa catégorie tarifaire.
+        /// Cette méthode montre comment obtenir le tarif article d'un article à gamme par sa référence, ses identifiants de gamme et sa catégorie tarifaire.
         /// </summary>
         public void GetTarifArticleGammeByRefArticle_IdGamme_IdCatTarifaire()
         {
@@ -333,7 +333,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le tarif article d'un article à gamme par sa référence, ses intitulés de gamme et sa catégorie tarifaire.
+        /// Cette méthode montre comment obtenir le tarif article d'un article à gamme par sa référence, ses intitulés de gamme et sa catégorie tarifaire.
         /// </summary>
         public void GetTarifArticleGammeByRefArticle_IntituleGamme_IdCatTarifaire()
         {
@@ -351,7 +351,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le tarif client d'un article par sa référence et la référence du fournisseur.
+        /// Cette méthode montre comment obtenir le tarif client d'un article par sa référence et la référence du fournisseur.
         /// </summary>
         public void GetTarifClientByRefArticleAndRefFournisseur()
         {
@@ -367,7 +367,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le tarif client d'un article à gamme 
+        /// Cette méthode montre comment obtenir le tarif client d'un article à gamme 
         /// par sa référence d'article, ses identifiants de gamme et sa référence client.
         /// </summary>
         public void GetTarifClientGammeIdGamme1()
@@ -385,7 +385,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le tarif client d'un article à gamme 
+        /// Cette méthode montre comment obtenir le tarif client d'un article à gamme 
         /// par sa référence d'article, ses intitulés de gamme et sa référence client.
         /// </summary>
         public void GetTarifClientGammeIntituleGamme1()
@@ -403,7 +403,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le tarif fournisseur d'un article
+        /// Cette méthode montre comment obtenir le tarif fournisseur d'un article
         ///  par sa référence d'article et sa référence de fournisseur.
         /// </summary>
         public void GetTarifFournisseurArticleStandard()
@@ -420,7 +420,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un tarif fournisseur d'article à gamme
+        /// Cette méthode montre comment obtenir un tarif fournisseur d'article à gamme
         /// par sa référence article, ses identifiants de gamme et son identifiant de fournisseur.
         /// </summary>
         public void GetTarifFournisseur_ArticleGamme()
@@ -439,7 +439,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un tarif article, ou le mettre à jour s'il existe déjà, dans la base.
+        /// Cette méthode montre comment insérer un tarif article, ou le mettre à jour s'il existe déjà, dans la base.
         /// </summary>
         public void TarifArticleInsertOrUpdate()
         {
@@ -463,7 +463,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un tarif client, ou le mettre à jour s'il existe déjà, dans la base.
+        /// Cette méthode montre comment insérer un tarif client, ou le mettre à jour s'il existe déjà, dans la base.
         /// </summary>
         public void TarifClientInsertOrUpdate()
         {
@@ -489,7 +489,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment supprimer un tarif client d'article à gamme de la base.
+        /// Cette méthode montre comment supprimer un tarif client d'article à gamme de la base.
         /// </summary>
         public void TarifClientGammeDelete()
         {
@@ -510,7 +510,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment supprimer un tarif client de la base.
+        /// Cette méthode montre comment supprimer un tarif client de la base.
         /// </summary>
         public void TarifClientDelete()
         {
@@ -529,7 +529,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment supprimer un tarif article de la base.
+        /// Cette méthode montre comment supprimer un tarif article de la base.
         /// </summary>
         public void TarifArticleDelete()
         {

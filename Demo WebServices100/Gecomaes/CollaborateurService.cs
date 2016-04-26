@@ -27,7 +27,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un collaborateur par son identifiant
+        /// Cette méthode montre comment obtenir un collaborateur par son identifiant.
         /// </summary>
         public void GetCollaborateurById()
         {
@@ -42,7 +42,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le nombre de collaborateur
+        /// Cette méthode montre comment obtenir le nombre de collaborateur.
         /// </summary>
         public void GetCollaborateurCount()
         {
@@ -54,7 +54,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le nombre de collaborateurs répondant à un critère
+        /// Cette méthode montre comment obtenir le nombre de collaborateurs répondant à un critère.
         /// </summary>
         public void GetCollaborateurCountByCriteria()
         {
@@ -70,7 +70,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de collaborateurs répondant à un critère
+        /// Cette méthode montre comment obtenir une liste de collaborateurs répondant à un critère.
         /// </summary>
         public void GetCollaborateurListByCriteria()
         {
@@ -85,7 +85,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de collaborateur triée sur une propriété
+        /// Cette méthode montre comment obtenir une liste de collaborateur triée sur une propriété.
         /// </summary>
         public void GetCollaborateurListOrdered()
         {
@@ -100,7 +100,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de collaborateurs
+        /// Cette méthode montre comment obtenir une page de liste de collaborateurs.
         /// </summary>
         public void GetCollaborateurListPaged()
         {
@@ -116,7 +116,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de collaborateurs comprenant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une page de liste de collaborateurs comprenant l'ensemble des paramètres.
         /// </summary>
         public void GetCollaborateurListComplex()
         {
@@ -139,7 +139,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un collaborateur dans la base
+        /// Cette méthode montre comment insérer un collaborateur dans la base.
         /// </summary>
         public void InsertCollaborateur()
         {
@@ -176,7 +176,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment mettre à jour un collaborateur
+        /// Cette méthode montre comment mettre à jour un collaborateur.
         /// </summary>
         public void UpdateCollaborateur()
         {
@@ -197,7 +197,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment supprimer un collaborateur
+        /// Cette méthode montre comment supprimer un collaborateur.
         /// </summary>
         public void DeleteCollaborateur()
         {

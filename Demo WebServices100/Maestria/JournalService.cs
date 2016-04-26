@@ -26,7 +26,7 @@ namespace DemoWebServices100.Maestria
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un journal par son code.
+        /// Cette méthode montre comment obtenir un journal par son code.
         /// </summary>
         public void GetJournalByCode()
         {
@@ -41,7 +41,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des journaux.
+        /// Cette méthode montre comment obtenir la liste des journaux.
         /// </summary>
         public void GetJournalList()
         {
@@ -53,7 +53,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de journaux répondants à un critère.
+        /// Cette méthode montre comment obtenir une liste de journaux répondants à un critère.
         /// </summary>
         public void GetJournalListByCriteria()
         {
@@ -68,7 +68,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée de journaux selon une propriété.
+        /// Cette méthode montre comment obtenir une liste triée de journaux selon une propriété.
         /// </summary>
         public void GetJournalListOrdered()
         {
@@ -83,7 +83,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de journaux.
+        /// Cette méthode montre comment obtenir une page de liste de journaux.
         /// </summary>
         public void GetJournalListPaged()
         {

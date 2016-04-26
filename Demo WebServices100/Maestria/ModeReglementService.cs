@@ -26,7 +26,7 @@ namespace DemoWebServices100.Maestria
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un mode de réglement par son indice.
+        /// Cette méthode montre comment obtenir un mode de réglement par son indice.
         /// </summary>
         public void GetModeReglementByIndice()
         {
@@ -41,7 +41,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une mode de réglement par son nom.
+        /// Cette méthode montre comment obtenir une mode de réglement par son nom.
         /// </summary>
         public void GetModeReglementByName()
         {
@@ -56,7 +56,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des modes de réglement.
+        /// Cette méthode montre comment obtenir la liste des modes de réglement.
         /// </summary>
         public void GetModeReglementList()
         {

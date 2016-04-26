@@ -27,7 +27,7 @@ namespace DemoWebServices100.Common
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tiers.
+        /// Cette méthode montre comment obtenir la liste des tiers.
         /// </summary>
         public void GetTiersList()
         {
@@ -39,7 +39,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des tiers répondant à un critère.
+        /// Cette méthode montre comment obtenir la liste des tiers répondant à un critère.
         /// </summary>
         public void GetTiersListByCriteria()
         {
@@ -54,25 +54,9 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des tiers.
+        /// Cette méthode montre comment obtenir une liste triée de tiers.
         /// </summary>
-        public void GetTiersListPaged()
-        {
-            //Définition de l'index de page et du nombre d'éléments par page
-            int pageIndex = 1;
-            int itemsPerPage = 10;
-
-            TiersService service = new TiersService(_webServiceUrl);
-
-            //Récupération de la page de la liste de tiers
-            IList<Tiers> tiers = service.GetList(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
-            
-        }
-
-        /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée de tiers.
-        /// </summary>
-        public void GetTiersListeOrdered()
+        public void GetTiersListOrdered()
         {
             //Définition de la méthode de tri
             List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
@@ -85,19 +69,57 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le nombre de tiers
+        /// Cette méthode montre comment obtenir une page de la liste des tiers.
+        /// </summary>
+        public void GetTiersListPaged()
+        {
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la page de la liste de tiers
+            IList<Tiers> tiers = service.GetList(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste des tiers en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetTiersListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("TypeTiers", ComparisonOperator.Equals, TypeTiers.Client);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste de tiers
+            IList<Tiers> tiers = service.GetList(criteria, orders, pageIndex, itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir le nombre de tiers.
         /// </summary>
         public void GetTiersListCount()
         {
             TiersService service = new TiersService(_webServiceUrl);
-            
+
             //Récupération du nombre de tiers
             int nb = service.GetCount();
-            
+
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un tiers par son identifiant.
+        /// Cette méthode montre comment obtenir un tiers par son identifiant.
         /// </summary>
         public void GetTiersByID()
         {
@@ -108,47 +130,252 @@ namespace DemoWebServices100.Common
 
             //Récupération du tiers
             Tiers tiers = service.GetTiers(refTiers);
-            
+
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des clients.
+        /// Cette méthode montre comment obtenir la liste des clients.
         /// </summary>
         public void GetTiersClientList()
         {
             TiersService service = new TiersService(_webServiceUrl);
 
             //Récupération de la liste des clients
-            IList<Client> tiers = service.GetListClient();
-            
+            IList<Client> tiersList = service.GetListClient();
+
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des fournisseurs.
+        /// Cette méthode montre comment obtenir la liste des clients répondant à un critère.
+        /// </summary>
+        public void GetTiersClientListByCriteria()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Pays", ComparisonOperator.Equals, "France");
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des clients
+            IList<Client> tiersList = service.GetListClient(criteria);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir la liste triée des clients.
+        /// </summary>
+        public void GetTiersClientListOrdered()
+        {
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des clients
+            IList<Client> tiersList = service.GetListClient(orders: orders);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une page de la liste des clients.
+        /// </summary>
+        public void GetTiersClientListPaged()
+        {
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des clients
+            IList<Client> tiersList = service.GetListClient(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste des clients en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetTiersClientListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Pays", ComparisonOperator.Equals, "France");
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des clients
+            IList<Client> tiersList = service.GetListClient(criteria, orders, pageIndex, itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir la liste des fournisseurs.
         /// </summary>
         public void GetTiersFournisseurList()
         {
             TiersService service = new TiersService(_webServiceUrl);
 
             //Récupération de la liste des fournisseurs
-            IList<Fournisseur> tiers = service.GetListFournisseur();
-            
+            IList<Fournisseur> tiersList = service.GetListFournisseur();
+
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des salariés.
+        /// Cette méthode montre comment obtenir la liste des fournisseurs répondant à un critère.
+        /// </summary>
+        public void GetTiersFournisseurListByCriteria()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Pays", ComparisonOperator.Equals, "France");
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des fournisseurs
+            IList<Fournisseur> tiersList = service.GetListFournisseur(criteria);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir la liste triée des fournisseurs.
+        /// </summary>
+        public void GetTiersFournisseurListOrdered()
+        {
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des fournisseurs
+            IList<Fournisseur> tiersList = service.GetListFournisseur(orders: orders);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une page de la liste des fournisseurs.
+        /// </summary>
+        public void GetTiersFournisseurListPaged()
+        {
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des fournisseurs
+            IList<Fournisseur> tiersList = service.GetListFournisseur(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste des fournisseurs en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetTiersFournisseurListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Pays", ComparisonOperator.Equals, "France");
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des fournisseurs
+            IList<Fournisseur> tiersList = service.GetListFournisseur(criteria, orders, pageIndex, itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir la liste des salariés.
         /// </summary>
         public void GetTiersSalarieList()
         {
             TiersService service = new TiersService(_webServiceUrl);
 
             //Récupération de la liste des salariés
-            IList<Salarie> tiers = service.GetListSalarie();
-            
+            IList<Salarie> tiersList = service.GetListSalarie();
+
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un client dans la base.
+        /// Cette méthode montre comment obtenir la liste des salariés répondant à un critère.
+        /// </summary>
+        public void GetTiersSalarieListByCriteria()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Pays", ComparisonOperator.Equals, "France");
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des salariés
+            IList<Salarie> tiersList = service.GetListSalarie(criteria);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir la liste triée des salariés.
+        /// </summary>
+        public void GetTiersSalarieListOrdered()
+        {
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des salariés
+            IList<Salarie> tiersList = service.GetListSalarie(orders: orders);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une page de la liste des salariés.
+        /// </summary>
+        public void GetTiersSalarieListPaged()
+        {
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des salariés
+            IList<Salarie> tiersList = service.GetListSalarie(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste des salariés en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetTiersSalarieListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Pays", ComparisonOperator.Equals, "France");
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroTiers", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 1;
+            int itemsPerPage = 10;
+
+            TiersService service = new TiersService(_webServiceUrl);
+
+            //Récupération de la liste des salariés
+            IList<Salarie> salarieList = service.GetListSalarie(criteria, orders, pageIndex, itemsPerPage);
+
+        }
+
+
+        /// <summary>
+        /// Cette méthode montre comment insérer un client dans la base.
         /// </summary>
         public void InsertClient()
         {
@@ -163,7 +390,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un fournisseur dans la base.
+        /// Cette méthode montre comment insérer un fournisseur dans la base.
         /// </summary>
         public void InsertFournisseur()
         {
@@ -171,14 +398,14 @@ namespace DemoWebServices100.Common
             Fournisseur fournisseur = CreateNewFournisseur();
 
             TiersService service = new TiersService(_webServiceUrl);
-            
+
             //Insertion du tiers
             Tiers tiersFromDb = service.Insert(fournisseur);
 
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un salarié dans la base.
+        /// Cette méthode montre comment insérer un salarié dans la base.
         /// </summary>
         public void InsertSalarie()
         {
@@ -193,7 +420,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment mettre à jour un tiers.
+        /// Cette méthode montre comment mettre à jour un tiers.
         /// </summary>
         public void UpdateTiers()
         {

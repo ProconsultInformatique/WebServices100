@@ -84,6 +84,8 @@
     <Compile Include="Maestria\TaxeService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\CriteriaDemo.cs" />
+    <Compile Include="Tool\OrderDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

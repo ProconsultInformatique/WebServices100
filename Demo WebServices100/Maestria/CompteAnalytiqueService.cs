@@ -26,7 +26,7 @@ namespace DemoWebServices100.Maestria
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des comptes analytiques
+        /// Cette méthode montre comment obtenir la liste des comptes analytiques.
         /// </summary>
         public void GetCompteAnalytiqueList()
         {
@@ -38,7 +38,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des comptes analytiques répondant à un critère
+        /// Cette méthode montre comment obtenir la liste des comptes analytiques répondant à un critère.
         /// </summary>
         public void GetCompteAnalytiqueListByCriteria()
         {
@@ -53,7 +53,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des comptes analytiques
+        /// Cette méthode montre comment obtenir une page de la liste des comptes analytiques.
         /// </summary>
         public void GetCompteAnalytiqueListPaged()
         {
@@ -69,7 +69,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée selon une propriété de comptes analytiques
+        /// Cette méthode montre comment obtenir une liste triée selon une propriété de comptes analytiques.
         /// </summary>
         public void GetCompteAnalytiqueListOrdered()
         {
@@ -84,7 +84,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un compte analytique
+        /// Cette méthode montre comment obtenir un compte analytique par ses identifiants.
         /// </summary>
         public void GetCompteAnalytiqueById()
         {

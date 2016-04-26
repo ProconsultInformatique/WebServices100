@@ -25,7 +25,7 @@ namespace DemoWebServices100.Common
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des types de contact.
+        /// Cette méthode montre comment obtenir la liste des types de contact.
         /// </summary>
         public void GetTypeContactList()
         {
@@ -37,7 +37,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un type de contact par son indice.
+        /// Cette méthode montre comment obtenir un type de contact par son indice.
         /// </summary>
         public void GetTypeContactByIndice()
         {
@@ -52,7 +52,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un type de contact par son nom.
+        /// Cette méthode montre comment obtenir un type de contact par son nom.
         /// </summary>
         public void GetTypeContactByName()
         {

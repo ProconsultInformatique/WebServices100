@@ -25,7 +25,7 @@ namespace DemoWebServices100.Common
         #region Méthode
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des pays.
+        /// Cette méthode montre comment obtenir la liste des pays.
         /// </summary>
         public void GetPaysList()
         {

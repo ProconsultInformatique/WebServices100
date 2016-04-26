@@ -26,7 +26,7 @@ namespace DemoWebServices100.Maestria
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un plan analytique par son indice.
+        /// Cette méthode montre comment obtenir un plan analytique par son indice.
         /// </summary>
         public void GetPlanAnalytiqueByIndice()
         {
@@ -41,7 +41,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un plan analytique par son nom.
+        /// Cette méthode montre comment obtenir un plan analytique par son nom.
         /// </summary>
         public void GetPlanAnalytiqueByName()
         {
@@ -56,7 +56,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des plans analytiques.
+        /// Cette méthode montre comment obtenir la liste des plans analytiques.
         /// </summary>
         public void GetPlanAnalytiqueList()
         {

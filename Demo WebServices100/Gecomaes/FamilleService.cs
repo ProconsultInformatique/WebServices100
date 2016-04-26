@@ -25,7 +25,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des familles
+        /// Cette méthode montre comment obtenir la liste des familles.
         /// </summary>
         public void GetFamilleList()
         {
@@ -37,7 +37,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des familles répondant à un critère
+        /// Cette méthode montre comment obtenir la liste des familles répondant à un critère.
         /// </summary>
         public void GetFamilleListByCriteria()
         {
@@ -52,7 +52,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des familles
+        /// Cette méthode montre comment obtenir une page de la liste des familles.
         /// </summary>
         public void GetFamilleListPaged()
         {
@@ -68,7 +68,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste triée selon une propriété des familles
+        /// Cette méthode montre comment obtenir une liste triée selon une propriété des familles.
         /// </summary>
         public void GetFamilleListOrdered()
         {
@@ -83,7 +83,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de familles en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de familles en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetFamilleListComplex()
         {
@@ -105,7 +105,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de famille selon leur type
+        /// Cette méthode montre comment obtenir une liste de famille selon leur type.
         /// </summary>
         public void GetFamilleListByType()
         {
@@ -120,7 +120,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de famille triée, suivant une propriété, selon leur type 
+        /// Cette méthode montre comment obtenir une liste de famille triée, suivant une propriété, selon leur type.
         /// </summary>
         public void GetFamilleListByTypeOrdered()
         {
@@ -138,7 +138,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste de famille par type
+        /// Cette méthode montre comment obtenir une page de la liste de famille par type.
         /// </summary>
         public void GetFamilleListByTypePaged()
         {
@@ -157,7 +157,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de famille par type en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de famille par type en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetFamilleListByTypeComplex()
         {
@@ -179,7 +179,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une famille par son identifiant
+        /// Cette méthode montre comment obtenir une famille par son identifiant.
         /// </summary>
         public void GetFamilleById()
         {

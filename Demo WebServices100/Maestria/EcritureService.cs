@@ -2,6 +2,7 @@
 using WebServices100.Proxy;
 using WebServices100.Model.DataContract;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DemoWebServices100.Maestria
 {
@@ -26,7 +27,7 @@ namespace DemoWebServices100.Maestria
         #region Ecriture
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une écriture comptable par son identifiant.
+        /// Cette méthode montre comment obtenir une écriture comptable par son identifiant.
         /// </summary>
         public void GetEcritureById()
         {
@@ -41,7 +42,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures comptables.
+        /// Cette méthode montre comment obtenir la liste des écritures comptables.
         /// </summary>
         public void GetEcritureList()
         {
@@ -53,7 +54,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures comptables répondants à un critère.
+        /// Cette méthode montre comment obtenir la liste des écritures comptables répondants à un critère.
         /// </summary>
         public void GetEcritureListByCriteria()
         {
@@ -68,7 +69,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste triée des écritures comptables suivant une propriété.
+        /// Cette méthode montre comment obtenir la liste triée des écritures comptables suivant une propriété.
         /// </summary>
         public void GetEcritureListOrdered()
         {
@@ -83,7 +84,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page d'écritures comptables.
+        /// Cette méthode montre comment obtenir une page d'écritures comptables.
         /// </summary>
         public void GetEcritureListPaged()
         {
@@ -101,7 +102,7 @@ namespace DemoWebServices100.Maestria
         #region ByCompteGeneral
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les écritures comptables d'un compte général.
+        /// Cette méthode montre comment obtenir les écritures comptables d'un compte général.
         /// </summary>
         public void GetEcritureListByCompteGeneral()
         {
@@ -116,7 +117,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir les écritures comptables d'un compte général sur une période.
+        /// Cette méthode montre comment obtenir les écritures comptables d'un compte général sur une période.
         /// </summary>
         public void GetEcritureListByCompteGeneral_Periode()
         {
@@ -150,7 +151,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page d'écritures comptables d'un compte général.
+        /// Cette méthode montre comment obtenir une page d'écritures comptables d'un compte général.
         /// </summary>
         public void GetEcritureListByCompteGeneralPaged()
         {
@@ -173,7 +174,7 @@ namespace DemoWebServices100.Maestria
         #region ByCodeJournal
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures comptables d'un journal.
+        /// Cette méthode montre comment obtenir la liste des écritures comptables d'un journal.
         /// </summary>
         public void GetEcritureListByJournal()
         {
@@ -188,7 +189,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures comptables d'un journal sur une période.
+        /// Cette méthode montre comment obtenir la liste des écritures comptables d'un journal sur une période.
         /// </summary>
         public void GetEcritureListByCodeJournal_AndPeriode()
         {
@@ -206,7 +207,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste triée des écritures comptables d'un journal.
+        /// Cette méthode montre comment obtenir la liste triée des écritures comptables d'un journal.
         /// </summary>
         public void GetEcritureListByCodeJournalOrdered()
         {
@@ -224,7 +225,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des écritures comptables d'un journal.
+        /// Cette méthode montre comment obtenir une page de la liste des écritures comptables d'un journal.
         /// </summary>
         public void GetEcritureListByCodeJournalPaged()
         {
@@ -247,7 +248,7 @@ namespace DemoWebServices100.Maestria
         #region ByCodeTiers
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures comptables d'un tiers.
+        /// Cette méthode montre comment obtenir la liste des écritures comptables d'un tiers.
         /// </summary>
         public void GetEcritureListByCodeTiers()
         {
@@ -262,7 +263,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures comptables d'un tiers sur une période.
+        /// Cette méthode montre comment obtenir la liste des écritures comptables d'un tiers sur une période.
         /// </summary>
         public void GetEcritureListByCodeTiersAndPeriode()
         {
@@ -280,7 +281,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste triée des écritures comptables d'un tiers.
+        /// Cette méthode montre comment obtenir la liste triée des écritures comptables d'un tiers.
         /// </summary>
         public void GetEcrituresByCodeTiersOrdered()
         {
@@ -298,7 +299,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page d'écritures comptables d'un tiers.
+        /// Cette méthode montre comment obtenir une page d'écritures comptables d'un tiers.
         /// </summary>
         public void GetEcritureListByCodeTiersPaged()
         {
@@ -319,7 +320,7 @@ namespace DemoWebServices100.Maestria
         #endregion
 
         /// <summary>
-        /// Méthode démontrant comment insérer une liste d'écritures comptables dans la base.
+        /// Cette méthode montre comment insérer une liste d'écritures comptables dans la base.
         /// </summary>
         public void InsertEcritureList()
         {
@@ -334,7 +335,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer une pièce comptable dans la base avec le paramètre useSageProcess à true.
+        /// Cette méthode montre comment insérer une pièce comptable dans la base avec le paramètre useSageProcess à true.
         /// </summary>
         public void InsertPiece_SageProcessTrue()
         {
@@ -355,7 +356,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment lettrer des écritures comptables.
+        /// Cette méthode montre comment lettrer des écritures comptables.
         /// </summary>
         public void LettrerEcritureList()
         {
@@ -383,7 +384,7 @@ namespace DemoWebServices100.Maestria
         #region Ecriture analytique
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures analytiques associées à une écriture comptable.
+        /// Cette méthode montre comment obtenir la liste des écritures analytiques associées à une écriture comptable.
         /// </summary>
         public void GetEcritureAnalytiqueList()
         {
@@ -398,7 +399,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures analytiques, associées à une écriture comptable, d'un plan.
+        /// Cette méthode montre comment obtenir la liste des écritures analytiques, associées à une écriture comptable, d'un plan.
         /// </summary>
         public void GetEcritureAnalytiqueListByPlan()
         {
@@ -414,7 +415,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des écritures analytiques, associées à une écriture comptable, d'une section analytique.
+        /// Cette méthode montre comment obtenir la liste des écritures analytiques, associées à une écriture comptable, d'une section analytique.
         /// </summary>
         public void GetEcritureAnalytiqueListBySection()
         {
@@ -430,7 +431,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer une liste d'écritures analytiques dans la base.
+        /// Cette méthode montre comment insérer une liste d'écritures analytiques dans la base.
         /// </summary>
         public void InsertEcritureAnalytiqueList()
         {
@@ -448,7 +449,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment supprimer de la base, les écritures analytiques d'une écriture comptable.
+        /// Cette méthode montre comment supprimer de la base, les écritures analytiques d'une écriture comptable.
         /// </summary>
         public void DeleteEcrituresAnalytiquesByIdEcritureComptable()
         {
@@ -464,7 +465,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment supprimer de la base, les écritures analytiques d'une écriture comptable et d'un plan.
+        /// Cette méthode montre comment supprimer de la base, les écritures analytiques d'une écriture comptable et d'un plan.
         /// </summary>
         public void DeleteEcrituresAnalytiquesByIdEcritureComptableAndByPlan()
         {
@@ -482,7 +483,7 @@ namespace DemoWebServices100.Maestria
         #endregion
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le dernier numéro de pièce comptable d'un journal.
+        /// Cette méthode montre comment obtenir le dernier numéro de pièce comptable d'un journal.
         /// </summary>
         public void GetLastPiece()
         {
@@ -498,8 +499,31 @@ namespace DemoWebServices100.Maestria
             string lastPiece = service.GetLastPiece(codeJournal, date);
         }
 
-        #region static
 
+        #region Méthodes métier
+
+        public void DemontrationInsertionPiececomptableAvecEcritureAnalytique()
+        {
+            Ecriture piece = GetNewPiece(true);
+
+            EcritureService service = new EcritureService(_webServiceUrl);
+
+            List<Ecriture> ecrituresFromDb = service.InsertPiece(piece);
+
+            Ecriture ecritureCharge = ecrituresFromDb.FirstOrDefault(o => o.CompteGeneral.StartsWith("7"));
+
+            EcritureAnalytique ecritureAnalytique = new EcritureAnalytique();
+            ecritureAnalytique.IdEcriture = ecritureCharge.Id;
+            ecritureAnalytique.Montant = ecritureCharge.Montant;
+            ecritureAnalytique.IdPlanAnalytique = 1;
+            ecritureAnalytique.Section = "921SI1";
+            service.InsertAnalytiques(new List<EcritureAnalytique>() { ecritureAnalytique });
+        }
+
+        #endregion
+
+
+        #region Méthodes statiques privées
 
         /// <summary>
         /// Méthode de fabrication d'une liste de 3 écritures comptables représentant une pièce comptable.
@@ -669,5 +693,6 @@ namespace DemoWebServices100.Maestria
         }
 
         #endregion
+
     }
 }

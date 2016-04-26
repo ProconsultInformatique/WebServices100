@@ -26,7 +26,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des adresses de livraison
+        /// Cette méthode montre comment obtenir la liste des adresses de livraison.
         /// </summary>
         public void GetAdresseLivraisonList()
         {
@@ -38,7 +38,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des adresses de livraison d'un tiers
+        /// Cette méthode montre comment obtenir la liste des adresses de livraison d'un tiers.
         /// </summary>
         public void GetAdresseLivraisonListByIdTiers()
         {
@@ -53,7 +53,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste d'adresse de livraison répondant à un critère
+        /// Cette méthode montre comment obtenir une liste d'adresse de livraison répondant à un critère.
         /// </summary>
         public void GetAdresseLivraisonListByCriteria()
         {
@@ -68,7 +68,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste d'adresses de livraison
+        /// Cette méthode montre comment obtenir une page de liste d'adresses de livraison.
         /// </summary>
         public void GetAdresseLivraisonListPaged()
         {
@@ -84,7 +84,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste d'adresse de livraison triée par une propriété
+        /// Cette méthode montre comment obtenir une liste d'adresse de livraison triée par une propriété.
         /// </summary>
         public void GetAdresseLivraisonListOrdered()
         {
@@ -99,7 +99,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste d'adresse de livraison en combinant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste d'adresse de livraison en combinant l'ensemble des paramètres.
         /// </summary>
         public void GetAdresseLivraisonListComplex()
         {
@@ -121,7 +121,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir le nombre d'adresses de livraison répondant à un critère
+        /// Cette méthode montre comment obtenir le nombre d'adresses de livraison répondant à un critère.
         /// </summary>
         public void GetAdresseLivraisonCountByCriteria()
         {
@@ -137,7 +137,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une adresse de livraison
+        /// Cette méthode montre comment obtenir une adresse de livraison.
         /// </summary>
         public void GetAdresseLivraison()
         {
@@ -154,7 +154,7 @@ namespace DemoWebServices100.Gecomaes
 
 
         /// <summary>
-        /// Méthode démontrant comment insérer une adresse de livraison dans la base
+        /// Cette méthode montre comment insérer une adresse de livraison dans la base.
         /// </summary>
         public void InsertAdresseLivraison()
         {
@@ -182,7 +182,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment mettre à jour une adresse de livraison
+        /// Cette méthode montre comment mettre à jour une adresse de livraison.
         /// </summary>
         public void UpdateAdresseLivraison()
         {
@@ -205,7 +205,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment supprimer une adresse de livraison
+        /// Cette méthode montre comment supprimer une adresse de livraison.
         /// </summary>
         public void DeleteAdresseLivraison()
         {
@@ -219,6 +219,29 @@ namespace DemoWebServices100.Gecomaes
             service.Delete(idTiers, idAdresse);
         }
 
-        #endregion  
+        #endregion
+
+        #region Méthodes métiers
+
+        /// <summary>
+        /// Cette méthode montre comment supprimer les adresses de livraison non principales d'un tiers.
+        /// </summary>
+        public void DemonstrationMetierSuppressionAdressesNonPrincipales()
+        {
+            //Définition du numéro de tiers
+            string idTiers = "BAGUES";
+
+            AdresseLivraisonService service = new AdresseLivraisonService(_webServiceUrl);
+
+            //Récupération des adresses de livraison du tiers non principales
+            List<AdresseLivraison> adresseLivraisonList = service.GetListByTiers(idTiers).Where(o => o.EstPrincipale == false).ToList();
+
+            //Suppression des adresses de livraison
+            foreach (AdresseLivraison adresseLivraison in adresseLivraisonList)
+                service.Delete(adresseLivraison.NumeroTiers, adresseLivraison.Id);
+
+        }
+
+        #endregion
     }
 }

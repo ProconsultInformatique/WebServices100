@@ -24,7 +24,7 @@ namespace DemoWebServices100.Common
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des services.
+        /// Cette méthode montre comment obtenir la liste des services.
         /// </summary>
         public void GetServiceContactList()
         {
@@ -36,7 +36,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un service par son identifiant.
+        /// Cette méthode montre comment obtenir un service par son identifiant.
         /// </summary>
         public void GetServiceContactByIndice()
         {
@@ -51,7 +51,7 @@ namespace DemoWebServices100.Common
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un service par son nom.
+        /// Cette méthode montre comment obtenir un service par son nom.
         /// </summary>
         public void GetServiceContactByName()
         {

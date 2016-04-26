@@ -27,7 +27,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes Document
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un document
+        /// Cette méthode montre comment obtenir un document.
         /// </summary>
         public void GetDocument()
         {
@@ -44,7 +44,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des documents
+        /// Cette méthode montre comment obtenir la liste des documents.
         /// </summary>
         public void GetDocumentList()
         {
@@ -56,7 +56,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de document répondant à un critère
+        /// Cette méthode montre comment obtenir une liste de document répondant à un critère.
         /// </summary>
         public void GetDocumentListByCriteria()
         {
@@ -71,7 +71,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de document triée selon une propriété
+        /// Cette méthode montre comment obtenir une liste de document triée selon une propriété.
         /// </summary>
         public void GetDocumentListOrdered()
         {
@@ -86,7 +86,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de document
+        /// Cette méthode montre comment obtenir une page de liste de document.
         /// </summary>
         public void GetDocumentListPaged()
         {
@@ -102,7 +102,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de documents en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetDocumentListComplex()
         {
@@ -124,7 +124,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des documents d'achat
+        /// Cette méthode montre comment obtenir la liste des documents d'achat.
         /// </summary>
         public void GetDocumentAchatList()
         {
@@ -136,7 +136,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents d'achat répondant à un critère
+        /// Cette méthode montre comment obtenir une liste de documents d'achat répondant à un critère.
         /// </summary>
         public void GetDocumentAchatListByCriteria()
         {
@@ -151,7 +151,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents d'achat trié selon une propriété
+        /// Cette méthode montre comment obtenir une liste de documents d'achat trié selon une propriété.
         /// </summary>
         public void GetDocumentAchatListOrdered()
         {
@@ -167,7 +167,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de documents d'achat
+        /// Cette méthode montre comment obtenir une page de liste de documents d'achat.
         /// </summary>
         public void GetDocumentAchatListPaged()
         {
@@ -183,7 +183,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents d'achat en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de documents d'achat en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetDocumentAchatListComplex()
         {
@@ -205,7 +205,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des documents interne
+        /// Cette méthode montre comment obtenir la liste des documents interne.
         /// </summary>
         public void GetDocumentInterneList()
         {
@@ -217,7 +217,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents interne répondant à un critère
+        /// Cette méthode montre comment obtenir une liste de documents interne répondant à un critère.
         /// </summary>
         public void GetDocumentInterneListByCriteria()
         {
@@ -232,7 +232,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents interne trié selon une propriété
+        /// Cette méthode montre comment obtenir une liste de documents interne trié selon une propriété.
         /// </summary>
         public void GetDocumentInterneListOrdered()
         {
@@ -248,7 +248,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de document interne
+        /// Cette méthode montre comment obtenir une page de liste de document interne.
         /// </summary>
         public void GetDocumentInterneListPaged()
         {
@@ -264,7 +264,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents internes en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de documents internes en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetDocumentInterneListComplex()
         {
@@ -286,7 +286,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des documents de stock
+        /// Cette méthode montre comment obtenir la liste des documents de stock.
         /// </summary>
         public void GetDocumentStockList()
         {
@@ -298,7 +298,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents de stock répondant à un critère
+        /// Cette méthode montre comment obtenir une liste de documents de stock répondant à un critère.
         /// </summary>
         public void GetDocumentStockListByCriteria()
         {
@@ -313,7 +313,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents de stock trié selon une propriété
+        /// Cette méthode montre comment obtenir une liste de documents de stock trié selon une propriété.
         /// </summary>
         public void GetDocumentStockListOrdered()
         {
@@ -328,7 +328,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de document de stock
+        /// Cette méthode montre comment obtenir une page de liste de document de stock.
         /// </summary>
         public void GetDocumentStockListPaged()
         {
@@ -344,7 +344,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents de stock en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de documents de stock en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetDocumentStockListComplex()
         {
@@ -365,7 +365,7 @@ namespace DemoWebServices100.Gecomaes
 
         }
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des documents de vente
+        /// Cette méthode montre comment obtenir la liste des documents de vente.
         /// </summary>
         public void GetDocumentVenteList()
         {
@@ -377,7 +377,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents de vente répondant à un critère
+        /// Cette méthode montre comment obtenir une liste de documents de vente répondant à un critère.
         /// </summary>
         public void GetDocumentVenteListByCriteria()
         {
@@ -392,7 +392,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents de vente trié selon une propriété
+        /// Cette méthode montre comment obtenir une liste de documents de vente trié selon une propriété.
         /// </summary>
         public void GetDocumentVenteListOrdered()
         {
@@ -407,7 +407,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de liste de document de vente
+        /// Cette méthode montre comment obtenir une page de liste de document de vente.
         /// </summary>
         public void GetDocumentVenteListPaged()
         {
@@ -423,7 +423,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une liste de documents de vente en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir une liste de documents de vente en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetDocumentVenteListComplex()
         {
@@ -445,7 +445,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des documents en cours d'un domaine
+        /// Cette méthode montre comment obtenir la liste des documents en cours d'un domaine.
         /// </summary>
         public void GetDocumentListEnCoursByDomaine()
         {
@@ -460,7 +460,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste triée, selon une propriété, des documents en cours d'un domaine
+        /// Cette méthode montre comment obtenir la liste triée, selon une propriété, des documents en cours d'un domaine.
         /// </summary>
         public void GetDocumentListEnCoursByDomaineOrdered()
         {
@@ -479,7 +479,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une page de la liste des documents en cours
+        /// Cette méthode montre comment obtenir une page de la liste des documents en cours.
         /// </summary>
         public void GetDocumentListEnCoursByDomainePaged()
         {
@@ -498,7 +498,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des documents en cours en utilisant l'ensemble des paramètres.
+        /// Cette méthode montre comment obtenir la liste des documents en cours en utilisant l'ensemble des paramètres.
         /// </summary>
         public void GetDocumentListEnCoursByDomaineComplex()
         {
@@ -537,7 +537,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer un entete de document sans créer d'instance de document
+        /// Cette méthode montre comment insérer un entete de document sans créer d'instance de document.
         /// </summary>
         public void InsertEntete()
         {
@@ -577,7 +577,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes LigneDocument
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une ligne de document
+        /// Cette méthode montre comment obtenir une ligne de document.
         /// </summary>
         public void GetLigneDocument()
         {
@@ -592,7 +592,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des lignes de document d'un document
+        /// Cette méthode montre comment obtenir la liste des lignes de document d'un document.
         /// </summary>
         public void GetLigneDocumentListOfDocument()
         {
@@ -608,7 +608,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer une ligne de document dans la base
+        /// Cette méthode montre comment insérer une ligne de document dans la base.
         /// </summary>
         public void InsertLigneDocument()
         {
@@ -627,7 +627,7 @@ namespace DemoWebServices100.Gecomaes
         #region Réglement
 
         /// <summary>
-        /// Méthode démontrant comment obtenie la liste des réglements d'un document
+        /// Cette méthode montre comment obtenie la liste des réglements d'un document.
         /// </summary>
         public void GetReglementListOfDocument()
         {
@@ -643,7 +643,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment insérer une liste de réglement dans la base
+        /// Cette méthode montre comment insérer une liste de réglement dans la base.
         /// </summary>
         public void InsertReglementList()
         {
@@ -667,7 +667,7 @@ namespace DemoWebServices100.Gecomaes
         #region DocumentTypeLibelle
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des libellé de type de document
+        /// Cette méthode montre comment obtenir la liste des libellé de type de document.
         /// </summary>
         public void GetDocumentTypeLibelleList()
         {
@@ -679,7 +679,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un libellé de type de document interne
+        /// Cette méthode montre comment obtenir un libellé de type de document interne.
         /// </summary>
         public void GetDocumentTypeLibelleInterneByLibelle()
         {
@@ -694,7 +694,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un libelle de type de document par le type de document
+        /// Cette méthode montre comment obtenir un libelle de type de document par le type de document.
         /// </summary>
         public void GetDocumentTypeLibelleByTypeDocument()
         {

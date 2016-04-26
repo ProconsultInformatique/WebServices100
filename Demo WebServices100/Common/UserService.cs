@@ -23,7 +23,7 @@ namespace DemoWebServices100.Common
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment contrôler que la paire {nom d'utilisateur, mot de passe} soit valide.
+        /// Cette méthode montre comment contrôler que la paire {nom d'utilisateur, mot de passe} soit valide.
         /// </summary>
         public void CheckLoginPassword()
         {

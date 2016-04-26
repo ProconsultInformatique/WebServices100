@@ -25,7 +25,7 @@ namespace DemoWebServices100.Maestria
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des devises
+        /// Cette méthode montre comment obtenir la liste des devises.
         /// </summary>
         public void GetDeviseList()
         {
@@ -37,7 +37,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une devise par son indice
+        /// Cette méthode montre comment obtenir une devise par son indice.
         /// </summary>
         public void GetDeviseByIndice()
         {

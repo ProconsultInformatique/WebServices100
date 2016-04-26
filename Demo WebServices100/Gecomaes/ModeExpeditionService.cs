@@ -25,7 +25,7 @@ namespace DemoWebServices100.Gecomaes
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des modes d'expédition
+        /// Cette méthode montre comment obtenir la liste des modes d'expédition.
         /// </summary>
         public void GetModeExpeditionList()
         {
@@ -37,7 +37,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un mode d'expédition par son indice
+        /// Cette méthode montre comment obtenir un mode d'expédition par son indice.
         /// </summary>
         public void GetModeExpeditionByIndice()
         {
@@ -52,7 +52,7 @@ namespace DemoWebServices100.Gecomaes
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir un mode d'expédition par son nom
+        /// Cette méthode montre comment obtenir un mode d'expédition par son nom.
         /// </summary>
         public void GetModeExpeditionByName()
         {

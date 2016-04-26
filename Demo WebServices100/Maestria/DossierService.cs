@@ -27,7 +27,7 @@ namespace DemoWebServices100.Maestria
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la devise du dossier
+        /// Cette méthode montre comment obtenir la devise du dossier.
         /// </summary>
         public void GetDeviseDossier()
         {
@@ -40,7 +40,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la période d'un exercice englobant une date
+        /// Cette méthode montre comment obtenir la période d'un exercice englobant une date.
         /// </summary>
         public void GetPeriodeExerciceByDate()
         {
@@ -55,7 +55,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Méthode démontrant comment obtenir la liste des périodes d'exercice
+        /// Cette méthode montre comment obtenir la liste des périodes d'exercice.
         /// </summary>
         public void GetPeriodeExerciceList()
         {

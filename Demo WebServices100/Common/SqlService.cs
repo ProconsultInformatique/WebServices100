@@ -23,7 +23,7 @@ namespace DemoWebServices100.Common
         #region Méthodes
 
         /// <summary>
-        /// Méthode démontrant comment obtenir une datatable correspondant à une requête de lecture.
+        /// Cette méthode montre comment obtenir une datatable correspondant à une requête de lecture.
         /// </summary>
         public void GetData()
         {
