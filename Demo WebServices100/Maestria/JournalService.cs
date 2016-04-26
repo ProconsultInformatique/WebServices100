@@ -37,7 +37,7 @@ namespace DemoWebServices100.Maestria
 
             //Récupération du journal
             Journal journal = service.GetJournal(codeJournal);
-            
+
         }
 
         /// <summary>
@@ -49,11 +49,11 @@ namespace DemoWebServices100.Maestria
 
             //Récupération de la liste des journaux
             List<Journal> journalList = service.GetList();
-            
+
         }
 
         /// <summary>
-        /// Cette méthode montre comment obtenir une liste de journaux répondants à un critère.
+        /// Cette méthode montre comment obtenir une liste de journaux répondant à un critère.
         /// </summary>
         public void GetJournalListByCriteria()
         {
@@ -61,10 +61,10 @@ namespace DemoWebServices100.Maestria
             Criteria criteria = new CriteriaComparison("TypeNumerotationPiece", ComparisonOperator.NotEqualTo, TypeNumerotationPieceJournal.ContinueJournal);
 
             JournalService service = new JournalService(_webServiceUrl);
-            
-            //Récupération de la liste des journaux répondants au critère
+
+            //Récupération de la liste des journaux répondant au critère
             List<Journal> journalList = service.GetList(criteria);
-            
+
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace DemoWebServices100.Maestria
 
             //Récupération de la liste triée
             List<Journal> journalList = service.GetList(orders: orders);
-            
+
         }
 
         /// <summary>
@@ -90,12 +90,34 @@ namespace DemoWebServices100.Maestria
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 2;
             int itemsPerPage = 6;
-            
+
             JournalService service = new JournalService(_webServiceUrl);
 
             //Récupération de la page de journaux
             List<Journal> journalList = service.GetList(rowsPerPage: itemsPerPage, pageNumber: pageIndex);
-            
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste de journaux en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetJournalListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("TypeNumerotationPiece", ComparisonOperator.NotEqualTo, TypeNumerotationPieceJournal.ContinueJournal);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("CompteGeneral", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 2;
+            int itemsPerPage = 6;
+
+            JournalService service = new JournalService(_webServiceUrl);
+
+            //Récupération de la page de journaux
+            List<Journal> journalList = service.GetList(criteria, orders, itemsPerPage, pageIndex);
+
         }
 
         #endregion

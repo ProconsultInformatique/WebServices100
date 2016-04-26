@@ -50,6 +50,8 @@ namespace DemoWebServices100.Tool
             foreach (Tiers tiers in tiersList)
                 Console.WriteLine("IdTiers: '{0}'\tEmail:'{1}'", tiers.NumeroTiers, tiers.Email);
 
+            Console.ReadLine();
+
         }
 
         /// <summary>
@@ -75,6 +77,7 @@ namespace DemoWebServices100.Tool
             foreach (TarifArticle tarifArticle in tarifArticleList)
                 Console.WriteLine("RefArticle: '{0}'\tIdCatTarifaire: {1}\tIntituleCatTarif: '{2}'\tPrix: {3}", tarifArticle.RefArticle, tarifArticle.IdCategorieTarifaire, tarifArticle.IntituleCategorieTarifaire, tarifArticle.PrixVente);
 
+            Console.ReadLine();
         }
 
         #endregion

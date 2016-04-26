@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DemoWebServices100.Maestria
 {
- 
+
     public class CompteAnalytiqueServiceDemo
     {
         #region Données membre
@@ -33,8 +33,8 @@ namespace DemoWebServices100.Maestria
             CompteAnalytiqueService service = new CompteAnalytiqueService(_webServiceUrl);
 
             //Récupération de la liste des comptes analytiques
-           List<CompteAnalytique> compteAnalytiqueList= service.GetList();
-            
+            List<CompteAnalytique> compteAnalytiqueList = service.GetList();
+
         }
 
         /// <summary>
@@ -46,10 +46,25 @@ namespace DemoWebServices100.Maestria
             Criteria criteria = new CriteriaComparison("Intitule", ComparisonOperator.Like, "%dir%");
 
             CompteAnalytiqueService service = new CompteAnalytiqueService(_webServiceUrl);
-            
+
             //Récupération de la liste des comptes analytiques répondant au critère
             List<CompteAnalytique> compteAnalytiqueList = service.GetList(criteria);
-            
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste triée selon une propriété de comptes analytiques.
+        /// </summary>
+        public void GetCompteAnalytiqueListOrdered()
+        {
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("IdPlanAnalytique", OrderType.Asc) };
+
+            CompteAnalytiqueService service = new CompteAnalytiqueService(_webServiceUrl);
+
+            //Récupération de la liste triée des comptes analytiques
+            List<CompteAnalytique> compteAnalytiqueList = service.GetList(orders: orders);
+
         }
 
         /// <summary>
@@ -64,23 +79,30 @@ namespace DemoWebServices100.Maestria
             CompteAnalytiqueService service = new CompteAnalytiqueService(_webServiceUrl);
 
             //Récupération de la page de la liste des comptes analytiques
-            List<CompteAnalytique> compteAnalytiqueList = service.GetList(pageNumber:pageIndex,rowsPerPage:itemsPerPage);
+            List<CompteAnalytique> compteAnalytiqueList = service.GetList(pageNumber: pageIndex, rowsPerPage: itemsPerPage);
 
         }
 
         /// <summary>
-        /// Cette méthode montre comment obtenir une liste triée selon une propriété de comptes analytiques.
+        /// Cette méthode montre comment obtenir une liste des comptes analytiques en utilisant l'ensemble des paramètres.
         /// </summary>
-        public void GetCompteAnalytiqueListOrdered()
+        public void GetCompteAnalytiqueListComplex()
         {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Intitule", ComparisonOperator.Like, "%dir%");
+
             //Définition de la méthode de tri
             List<Order> orders = new List<Order>() { new Order("IdPlanAnalytique", OrderType.Asc) };
 
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 6;
+
             CompteAnalytiqueService service = new CompteAnalytiqueService(_webServiceUrl);
-            
-            //Récupération de la liste triée des comptes analytiques
-            List<CompteAnalytique> compteAnalytiqueList = service.GetList(orders:orders);            
-            
+
+            //Récupération de la liste des comptes analytiques
+            List<CompteAnalytique> compteAnalytiqueList = service.GetList(criteria, orders, pageIndex, itemsPerPage);
+
         }
 
         /// <summary>
@@ -96,7 +118,7 @@ namespace DemoWebServices100.Maestria
 
             //Récupération du compte analytique
             CompteAnalytique compteAnalytique = service.GetCompteAnalytique(numPlan, numCompte);
-            
+
         }
 
         #endregion

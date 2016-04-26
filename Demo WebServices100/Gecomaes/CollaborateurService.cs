@@ -65,7 +65,7 @@ namespace DemoWebServices100.Gecomaes
 
             CollaborateurService service = new CollaborateurService(_webServiceUrl);
 
-            //Récupération du nombre de collaborateurs répondants au critère
+            //Récupération du nombre de collaborateurs répondant au critère
             int count = service.GetCount(criteria);
         }
 

@@ -54,7 +54,7 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Cette méthode montre comment obtenir la liste des écritures comptables répondants à un critère.
+        /// Cette méthode montre comment obtenir la liste des écritures comptables répondant à un critère.
         /// </summary>
         public void GetEcritureListByCriteria()
         {
@@ -96,6 +96,28 @@ namespace DemoWebServices100.Maestria
 
             //Récupération de la page d'écritures comptables
             List<Ecriture> ecritureList = service.GetListEcritures(rowsPerPage: itemsPerPage, pageNumber: pageIndex);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une page d'écritures comptables en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetEcritureListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("EstLettree", ComparisonOperator.NotEqualTo, true);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroFacture", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 3;
+            int itemsPerPage = 5;
+
+            EcritureService service = new EcritureService(_webServiceUrl);
+
+            //Récupération de la page d'écritures comptables
+            List<Ecriture> ecritureList = service.GetListEcritures(criteria, orders, itemsPerPage, pageIndex);
 
         }
 
@@ -169,6 +191,32 @@ namespace DemoWebServices100.Maestria
 
         }
 
+        /// <summary>
+        /// Cette méthode montre comment obtenir une page d'écritures comptables d'un compte général en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetEcritureListByCompteGeneralComplex()
+        {
+            //Définition du numéro de compte général
+            string numCompteGeneral = "4010000";
+
+            //Définition de la période
+            DateTime dateDebut = new DateTime(2014, 1, 1);
+            DateTime dateFin = new DateTime(2014, 12, 31);
+            Periode periode = new Periode(dateDebut, dateFin, false);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("Montant", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 4;
+            int itemsPerPage = 10;
+
+            EcritureService service = new EcritureService(_webServiceUrl);
+
+            //Récupération de la page des écritures comptable
+            List<Ecriture> ecritureList = service.GetEcrituresByCompteGeneral(numCompteGeneral, periode, orders, pageIndex, itemsPerPage);
+        }
+
         #endregion
 
         #region ByCodeJournal
@@ -191,7 +239,7 @@ namespace DemoWebServices100.Maestria
         /// <summary>
         /// Cette méthode montre comment obtenir la liste des écritures comptables d'un journal sur une période.
         /// </summary>
-        public void GetEcritureListByCodeJournal_AndPeriode()
+        public void GetEcritureListByCodeJournalAndPeriode()
         {
             //Définition du code journal et de la période
             string codeJournal = "VTE";
@@ -243,6 +291,33 @@ namespace DemoWebServices100.Maestria
 
         }
 
+        /// <summary>
+        /// Cette méthode montre comment obtenir une page de la liste des écritures comptables d'un journal en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetEcritureListByCodeJournalComplex()
+        {
+            //Définition du code journal
+            string codeJournal = "VTE";
+
+            //Définition de la période
+            DateTime dateDebut = new DateTime(2013, 1, 1);
+            DateTime dateFin = new DateTime(2013, 12, 31);
+            Periode periode = new Periode(dateDebut, dateFin, false);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("NumeroPiece", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 4;
+            int itemsPerPage = 10;
+
+            EcritureService service = new EcritureService(_webServiceUrl);
+
+            //Récupération de la liste des écritures
+            List<Ecriture> ecritureList = service.GetEcrituresByJournal(codeJournal, periode, orders, pageIndex, itemsPerPage);
+
+        }
+
         #endregion
 
         #region ByCodeTiers
@@ -283,7 +358,7 @@ namespace DemoWebServices100.Maestria
         /// <summary>
         /// Cette méthode montre comment obtenir la liste triée des écritures comptables d'un tiers.
         /// </summary>
-        public void GetEcrituresByCodeTiersOrdered()
+        public void GetEcritureListByCodeTiersOrdered()
         {
             //Définition du code tiers
             string numTiers = "TOPAZ";
@@ -314,6 +389,33 @@ namespace DemoWebServices100.Maestria
 
             //Récupération de la liste des écritures comptables
             List<Ecriture> ecritureList = service.GetEcrituresByTiers(numTiers, pageNumber: pageIndex, rowsPerPage: itemsPerPage);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une page d'écritures comptables d'un tiers en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetEcritureListByCodeTiersComplex()
+        {
+            //Définition du code tiers.
+            string numTiers = "CARAT";
+
+            //Définition de la période
+            DateTime dateDebut = new DateTime(2014, 1, 1);
+            DateTime dateFin = new DateTime(2014, 12, 31);
+            Periode periode = new Periode(dateDebut, dateFin, false);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("Id", OrderType.Asc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 4;
+            int itemsPerPage = 10;
+
+            EcritureService service = new EcritureService(_webServiceUrl);
+
+            //Récupération de la liste des écritures comptables
+            List<Ecriture> ecritureList = service.GetEcrituresByTiers(numTiers, periode, orders, pageIndex, itemsPerPage);
 
         }
 

@@ -46,10 +46,25 @@ namespace DemoWebServices100.Maestria
             Criteria criteria = new CriteriaComparison("Intitule", ComparisonOperator.Like, "%fo%");
 
             CompteGeneralService service = new CompteGeneralService(_webServiceUrl);
-            
+
             //Récupération de la liste des comptes généraux filtrée
             List<CompteGeneral> compteGeneralList = service.GetList(criteria);
-            
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste de comptes généraux triée sur une propriété.
+        /// </summary>
+        public void GetCompteGeneralListOrdered()
+        {
+            //Définition du tri
+            List<Order> orders = new List<Order>() { new Order("NatureCompte", OrderType.Asc) };
+
+            CompteGeneralService service = new CompteGeneralService(_webServiceUrl);
+
+            //Récupération de la liste des comptes généraux triée
+            List<CompteGeneral> compteGeneralList = service.GetList(orders: orders);
+
         }
 
         /// <summary>
@@ -69,19 +84,27 @@ namespace DemoWebServices100.Maestria
         }
 
         /// <summary>
-        /// Cette méthode montre comment obtenir une liste de comptes généraux triée sur une propriété.
+        /// Cette méthode montre comment obtenir une liste de comptes généraux en utilisant l'ensemble des paramètres.
         /// </summary>
-        public void GetCompteGeneralListOrdered()
+        public void GetCompteGeneralListComplex()
         {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Intitule", ComparisonOperator.Like, "%fo%");
+
             //Définition du tri
             List<Order> orders = new List<Order>() { new Order("NatureCompte", OrderType.Asc) };
 
+            //Définition de la page à obtenir et du nombre d'éléments par page
+            int pageIndex = 5;
+            int itemsByPage = 8;
+
             CompteGeneralService service = new CompteGeneralService(_webServiceUrl);
-            
-            //Récupération de la liste des comptes généraux triée
-            List<CompteGeneral> compteGeneralList = service.GetList(orders: orders);
+
+            //Récupération de la liste de comptes généraux
+            List<CompteGeneral> compteGeneralList = service.GetList(criteria, orders, pageIndex, itemsByPage);
 
         }
+
 
         /// <summary>
         /// Cette méthode montre comment obtenir un compte général par son identifiant.
@@ -96,7 +119,7 @@ namespace DemoWebServices100.Maestria
 
             //Récupération du compte général
             CompteGeneral compteGeneral = service.GetCompteGeneral(numCompte);
-            
+
         }
 
         /// <summary>
@@ -116,12 +139,12 @@ namespace DemoWebServices100.Maestria
                 ReportCompte = TypeReportCompte.Aucun,
                 TypeCompte = TypeCompte.Detail
             };
-            
+
             CompteGeneralService service = new CompteGeneralService(_webServiceUrl);
-            
+
             //Insertion du compte général dans la base
             CompteGeneral compteGeneralFromDB = service.Insert(compteGeneral, false);
-            
+
         }
 
         /// <summary>
@@ -136,9 +159,9 @@ namespace DemoWebServices100.Maestria
                 Intitule = "TestInsert_WebService",
                 NumeroCompte = "6660066600"
             };
-            
+
             CompteGeneralService service = new CompteGeneralService(_webServiceUrl);
-            
+
             //Insertion du compte général dans la base
             CompteGeneral compteGeneralFromDB = service.Insert(compteGeneral, true);
 

@@ -144,7 +144,7 @@ namespace DemoWebServices100.Gecomaes
 
             TarifService service = new TarifService(_webServiceUrl);
 
-            //Récupération des tarifs client répondants au critère
+            //Récupération des tarifs client répondant au critère
             List<TarifClient> tarifClientList = service.GetListTarifClients(criteria);
 
         }

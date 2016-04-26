@@ -33,11 +33,11 @@ namespace DemoWebServices100.Maestria
 
             //Récupération de la liste des taxes
             List<Taxe> taxeList = service.GetList();
-            
+
         }
 
         /// <summary>
-        /// Cette méthode montre comment obtenir la liste des taxes répondants à un critère.
+        /// Cette méthode montre comment obtenir la liste des taxes répondant à un critère.
         /// </summary>
         public void GetTaxeListByCriteria()
         {
@@ -45,10 +45,10 @@ namespace DemoWebServices100.Maestria
             Criteria criteria = new CriteriaComparison("Taux", ComparisonOperator.GreaterThan, 10);
 
             TaxeService service = new TaxeService(_webServiceUrl);
-            
+
             //Récupération de la liste des taxes
             List<Taxe> taxeList = service.GetList(criteria);
-            
+
         }
 
         /// <summary>
@@ -60,10 +60,10 @@ namespace DemoWebServices100.Maestria
             List<Order> orders = new List<Order>() { new Order("Taux", OrderType.Desc) };
 
             TaxeService service = new TaxeService(_webServiceUrl);
-            
+
             //Récupération de la liste des taxes
             List<Taxe> taxeList = service.GetList(orders: orders);
-            
+
         }
 
         /// <summary>
@@ -74,12 +74,34 @@ namespace DemoWebServices100.Maestria
             //Définition de l'index de page et du nombre d'éléments par page
             int pageIndex = 4;
             int itemsPerPage = 10;
-            
+
             TaxeService service = new TaxeService(_webServiceUrl);
 
             //Récupération de la page de taxe
-            List<Taxe> taxeList = service.GetList(rowsPerPage:itemsPerPage,pageNumber:pageIndex);
-            
+            List<Taxe> taxeList = service.GetList(rowsPerPage: itemsPerPage, pageNumber: pageIndex);
+
+        }
+
+        /// <summary>
+        /// Cette méthode montre comment obtenir une liste de taxes en utilisant l'ensemble des paramètres.
+        /// </summary>
+        public void GetTaxeListComplex()
+        {
+            //Définition du critère
+            Criteria criteria = new CriteriaComparison("Taux", ComparisonOperator.GreaterThan, 10);
+
+            //Définition de la méthode de tri
+            List<Order> orders = new List<Order>() { new Order("Taux", OrderType.Desc) };
+
+            //Définition de l'index de page et du nombre d'éléments par page
+            int pageIndex = 4;
+            int itemsPerPage = 10;
+
+            TaxeService service = new TaxeService(_webServiceUrl);
+
+            //Récupération de la liste de taxes
+            List<Taxe> taxeList = service.GetList(criteria, orders, pageIndex, itemsPerPage);
+
         }
 
         #endregion

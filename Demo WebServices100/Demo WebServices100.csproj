@@ -84,13 +84,14 @@
     <Compile Include="Maestria\TaxeService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tool\CriteriaDemo.cs" />
-    <Compile Include="Tool\OrderDemo.cs" />
+    <Compile Include="Tool\Criteria.cs" />
+    <Compile Include="Tool\Order.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Common\CommonClasses.cd" />
     <None Include="Gecomaes\GecomaesClasses.cd" />
+    <None Include="Maestria\MaestriaClasses.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

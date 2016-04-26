@@ -594,7 +594,7 @@ namespace DemoWebServices100.Gecomaes
         /// <summary>
         /// Cette méthode montre comment obtenir la liste des lignes de document d'un document.
         /// </summary>
-        public void GetLigneDocumentListOfDocument()
+        public void GetLigneDocumentListByIdentifiantsDocument()
         {
             //Définition du type et du numéro de document
             TypeDocument typeDoc = TypeDocument.BonAvoirVente;
@@ -613,7 +613,7 @@ namespace DemoWebServices100.Gecomaes
         public void InsertLigneDocument()
         {
             //Définition de la ligne de document à insérer
-            LigneDocument ligne = GetLigne(TypeDocument.PreparationDeCommandeAchat, "PC00002");
+            LigneDocument ligne = CreateNewLigneDocument(TypeDocument.PreparationDeCommandeAchat, "PC00002");
 
             DocumentService service = new DocumentService(_webServiceUrl);
 
@@ -652,7 +652,7 @@ namespace DemoWebServices100.Gecomaes
             string numDocument = "FA00015";
 
             //Définition de la liste des réglements
-            List<Reglement> reglementList = GetReglementList();
+            List<Reglement> reglementList = CreateNewReglementList();
 
             DocumentService service = new DocumentService(_webServiceUrl);
 
@@ -791,7 +791,7 @@ namespace DemoWebServices100.Gecomaes
         /// <param name="typeDoc">Type de document de la ligne</param>
         /// <param name="numDoc">Numéro du document de la ligne</param>
         /// <returns></returns>
-        private LigneDocument GetLigne(TypeDocument typeDoc, string numDoc)
+        private LigneDocument CreateNewLigneDocument(TypeDocument typeDoc, string numDoc)
         {
             LigneArticle ligneArticle = new LigneArticle(typeDoc);
             ligneArticle.NumeroDocument = numDoc;
@@ -807,7 +807,7 @@ namespace DemoWebServices100.Gecomaes
         /// Méthode de construction d'une liste de réglements
         /// </summary>
         /// <returns></returns>
-        private List<Reglement> GetReglementList()
+        private List<Reglement> CreateNewReglementList()
         {
             List<Reglement> reglementList = new List<Reglement>();
             Reglement reglement = new Reglement()

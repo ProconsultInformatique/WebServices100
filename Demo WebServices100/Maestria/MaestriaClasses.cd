@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DemoWebServices100.Maestria.CompteAnalytiqueServiceDemo">
+    <Position X="10.75" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAABAAAAABgQAAAAAAAAAAAQA=</HashCode>
+      <FileName>Maestria\CompteAnalytiqueService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Maestria.CompteGeneralServiceDemo">
+    <Position X="10.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CQEgAAAAAAAAAAAAAAABAAAAAABAgQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maestria\CompteGeneralService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Maestria.DeviseServiceDemo">
+    <Position X="0.5" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAAAAABAAAAAA=</HashCode>
+      <FileName>Maestria\DeviseService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Maestria.DossierServiceDemo">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAIgAAAAAAABAAAAAA=</HashCode>
+      <FileName>Maestria\DossierService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Maestria.EcritureServiceDemo">
+    <Position X="3.5" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>GAAAAIAgQAAAANEQBRAMgBQAAAAAkBEAAgABDIFBAQE=</HashCode>
+      <FileName>Maestria\EcritureService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Maestria.JournalServiceDemo">
+    <Position X="8.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAkAAgIAQAAAQAAAA=</HashCode>
+      <FileName>Maestria\JournalService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Maestria.ModeReglementServiceDemo">
+    <Position X="0.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAICEAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maestria\ModeReglementService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Maestria.PlanAnalytiqueServiceDemo">
+    <Position X="0.5" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAIAgAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Maestria\PlanAnalytiqueService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DemoWebServices100.Maestria.TaxeServiceDemo">
+    <Position X="8.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAQAAAAAAACAAAAAggAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Maestria\TaxeService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

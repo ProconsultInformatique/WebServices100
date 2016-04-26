@@ -47,9 +47,13 @@ namespace DemoWebServices100.Tool
             orders.Add( orderNumTiersDesc);
 
             WebServices100.Proxy.TiersService service = new WebServices100.Proxy.TiersService(_webServiceUrl);
+
             List<Tiers> tiersList = service.GetList(orders: orders);
+
             foreach (Tiers tiers in tiersList)
                 Console.WriteLine("Pays: '{0}'\tNumTiers: '{1}'", tiers.Pays, tiers.NumeroTiers);
+
+            Console.ReadLine();
         }
 
         #endregion
